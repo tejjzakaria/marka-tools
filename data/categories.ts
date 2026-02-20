@@ -65,6 +65,7 @@ export const categories: Category[] = [
     color: "bg-green-500",
     slug: "business-packs",
     featured: true,
+    image: "/categories/Packs%20Business.jpeg",
   },
 ];
 
