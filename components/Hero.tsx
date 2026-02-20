@@ -147,17 +147,31 @@ export default function Hero() {
             {featuredCategories.map((category, index) => (
               <div
                 key={category.id}
-                className="animate-fade-in-up group w-[calc(50%-8px)] flex-1 cursor-pointer rounded-2xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:w-48 sm:flex-none lg:flex-1"
+                className="animate-fade-in-up group w-[calc(50%-8px)] flex-1 cursor-pointer overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:w-48 sm:flex-none lg:flex-1"
                 style={{ animationDelay: `${800 + index * 100}ms` }}
               >
-                <div
-                  className={`mb-4 inline-flex rounded-xl ${category.color} p-3 text-white transition-transform duration-300 group-hover:scale-110`}
-                >
-                  <category.icon size={24} />
+                {category.image ? (
+                  <div className="relative aspect-[4/3] w-full overflow-hidden">
+                    <Image
+                      src={category.image}
+                      alt={t(category.translationKey)}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="(max-width: 640px) 50vw, 192px"
+                    />
+                  </div>
+                ) : (
+                  <div className="p-6 pb-2">
+                    <div className={`inline-flex rounded-xl ${category.color} p-3 text-white transition-transform duration-300 group-hover:scale-110`}>
+                      <category.icon size={24} />
+                    </div>
+                  </div>
+                )}
+                <div className="p-4 pt-3">
+                  <h3 className="text-sm font-semibold text-neutral-700 transition-colors group-hover:text-primary">
+                    {t(category.translationKey)}
+                  </h3>
                 </div>
-                <h3 className="font-semibold text-neutral-700 transition-colors group-hover:text-primary">
-                  {t(category.translationKey)}
-                </h3>
               </div>
             ))}
           </div>

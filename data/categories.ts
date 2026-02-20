@@ -18,6 +18,7 @@ export interface Category {
   color: string;
   slug: string;
   featured?: boolean;
+  image?: string;
 }
 
 export const categories: Category[] = [
@@ -28,6 +29,7 @@ export const categories: Category[] = [
     color: "bg-blue-500",
     slug: "printing-marking",
     featured: true,
+    image: "/categories/Iprimantes%20%26%20Marquage.jpeg",
   },
   {
     id: "engraving",
@@ -36,6 +38,7 @@ export const categories: Category[] = [
     color: "bg-orange-500",
     slug: "engraving-machines",
     featured: true,
+    image: "/categories/Machines%20de%20Gravure.jpeg",
   },
   {
     id: "consumables",
@@ -44,6 +47,7 @@ export const categories: Category[] = [
     color: "bg-cyan-500",
     slug: "consumables-inks",
     featured: true,
+    image: "/categories/Consommables%20%26%20Encres.jpeg",
   },
   {
     id: "labeling",
@@ -52,6 +56,7 @@ export const categories: Category[] = [
     color: "bg-purple-500",
     slug: "labeling-packaging",
     featured: true,
+    image: "/categories/%C3%89tiquetage%20%26%20Packaging.jpeg",
   },
   {
     id: "businessPacks",
