@@ -1,0 +1,1057 @@
+{
+  "common": {
+    "submit": "Soumettre",
+    "search": "Rechercher",
+    "shopNow": "Acheter maintenant",
+    "exploreCategories": "Explorer les catégories",
+    "viewAll": "Voir tout",
+    "currency": "MAD",
+    "addToCart": "Ajouter au panier",
+    "added": "Ajouté",
+    "home": "Accueil"
+  },
+  "header": {
+    "freeShippingBanner": "Livraison gratuite pour les commandes de plus de 200 MAD",
+    "welcome": "Bienvenue chez Marka Tools",
+    "searchPlaceholder": "Rechercher des produits...",
+    "cart": "Panier"
+  },
+  "nav": {
+    "home": "Accueil",
+    "shop": "Boutique",
+    "about": "À propos",
+    "contact": "Contact",
+    "categories": "Catégories"
+  },
+  "hero": {
+    "tagline": "Les meilleurs produits aux meilleurs prix",
+    "title": "Tout l'équipement dont votre marque a besoin,",
+    "titleHighlight": "en un seul endroit.",
+    "subtitle": "Découvrez une large gamme d'outils et de machines de personnalisation professionnelles, aux meilleurs prix, avec livraison rapide partout au Maroc.",
+    "stats": {
+      "products": "Produits",
+      "customers": "Clients satisfaits",
+      "cities": "Villes"
+    },
+    "features": {
+      "freeShipping": "Livraison gratuite",
+      "freeShippingDesc": "Pour les commandes de plus de 200 MAD",
+      "securePayment": "Paiement sécurisé",
+      "securePaymentDesc": "Plusieurs méthodes de paiement",
+      "support": "Support 24/7",
+      "supportDesc": "Service client exceptionnel"
+    }
+  },
+  "categories": {
+    "title": "Toutes les Catégories",
+    "subtitle": "Explorez notre gamme complète de catégories de produits",
+    "products": "produits",
+    "browse": "Parcourir",
+    "noCategories": "Aucune Catégorie",
+    "noCategoriesDesc": "Aucune catégorie n'a encore été ajoutée",
+    "ctaTitle": "Vous ne trouvez pas ce que vous cherchez?",
+    "ctaSubtitle": "Parcourez tous nos produits pour trouver exactement ce dont vous avez besoin",
+    "shopAll": "Voir Tous les Produits",
+    "printing": "Imprimantes & Marquage",
+    "engraving": "Machines de Gravure",
+    "consumables": "Consommables & Encres",
+    "labeling": "Étiquetage & Packaging",
+    "businessPacks": "Packs Business"
+  },
+  "sections": {
+    "featuredProducts": {
+      "title": "Produits en vedette",
+      "subtitle": "Découvrez nos meilleurs produits sélectionnés avec soin"
+    },
+    "categories": {
+      "title": "Acheter par catégorie",
+      "subtitle": "Explorez notre large gamme de catégories",
+      "viewAll": "Voir toutes les catégories"
+    },
+    "testimonials": {
+      "title": "Ce que disent nos clients",
+      "subtitle": "Avis authentiques de clients satisfaits"
+    }
+  },
+  "badges": {
+    "new": "Nouveau",
+    "sale": "Promo",
+    "bestseller": "Best-seller"
+  },
+  "products": {
+    "wirelessEarbuds": "Écouteurs sans fil Pro",
+    "wirelessEarbudsDesc": "Écouteurs sans fil haute qualité avec réduction du bruit et jusqu'à 30 heures d'autonomie",
+    "wirelessEarbudsShort": "Profitez d'un son pur et clair avec la technologie avancée de réduction du bruit",
+    "smartWatch": "Montre connectée Series 5",
+    "smartWatchDesc": "Montre connectée avancée pour suivre votre santé et forme physique avec écran haute résolution",
+    "smartWatchShort": "Surveillez votre santé et restez connecté avec notre montre la plus avancée",
+    "leatherHandbag": "Sac à main en cuir",
+    "faceSerum": "Sérum visage bio",
+    "yogaMat": "Tapis de yoga premium",
+    "dinnerSet": "Service de table en céramique",
+    "bluetoothSpeaker": "Enceinte Bluetooth",
+    "cottonDress": "Robe en coton",
+    "gamingHeadset": "Casque gaming",
+    "runningShoes": "Chaussures de course",
+    "makeupBrushSet": "Set de pinceaux maquillage",
+    "decorativeLamp": "Lampe décorative",
+    "mensWatch": "Montre homme classique",
+    "fitnessTracker": "Bracelet fitness",
+    "perfumeCollection": "Collection de parfums",
+    "kidsToySet": "Set de jouets enfants",
+    "kitchenBlender": "Blender cuisine",
+    "babyStroller": "Poussette bébé",
+    "laptopBackpack": "Sac à dos ordinateur",
+    "wirelessCharger": "Chargeur sans fil",
+    "sunglasses": "Lunettes de soleil premium",
+    "hairDryer": "Sèche-cheveux pro",
+    "dumbbellsSet": "Set d'haltères",
+    "coffeeMaker": "Machine à café",
+    "electricHeatingBelt": "Ceinture chauffante électrique anti-douleurs menstruelles",
+    "electricHeatingBeltDesc": "Ceinture chauffante électrique innovante conçue spécialement pour soulager les douleurs menstruelles. Combine la technologie de chauffage électrique avec la fonction de vibration pour apporter confort et relaxation à l'abdomen",
+    "electricHeatingBeltShort": "Dites adieu aux douleurs menstruelles grâce à la technologie de chauffage et de vibration avancée",
+    "rotatingRingBox": "Boîte à bague rotative - Design gâteau ours",
+    "rotatingRingBoxDesc": "Rendez vos moments spéciaux inoubliables avec cette boîte unique. Parfaite pour présenter bagues et bijoux de manière élégante et innovante, que ce soit pour des fiançailles, anniversaires ou occasions spéciales",
+    "rotatingRingBoxShort": "Boîte élégante et innovante pour présenter bagues et bijoux lors d'occasions spéciales"
+  },
+  "shop": {
+    "title": "Boutique",
+    "subtitle": "Découvrez tous nos produits de haute qualité",
+    "searchResults": "Résultats de recherche",
+    "productsFound": "produits trouvés",
+    "showingResults": "Affichage de {count} produits",
+    "sortBy": "Trier par",
+    "reviews": "avis",
+    "outOfStock": "Rupture de stock",
+    "inStock": "En stock",
+    "available": "disponible",
+    "noProducts": "Aucun produit trouvé",
+    "noProductsDescription": "Essayez de modifier les filtres pour trouver des produits",
+    "filters": {
+      "title": "Filtres",
+      "clearAll": "Effacer tout",
+      "apply": "Appliquer les filtres",
+      "categories": "Catégories",
+      "badges": "Étiquettes",
+      "availability": "Disponibilité",
+      "inStockOnly": "En stock uniquement",
+      "price": {
+        "title": "Prix",
+        "under100": "Moins de 100 MAD",
+        "100to300": "100 - 300 MAD",
+        "300to500": "300 - 500 MAD",
+        "over500": "Plus de 500 MAD"
+      }
+    },
+    "sort": {
+      "featured": "En vedette",
+      "newest": "Plus récent",
+      "priceAsc": "Prix: croissant",
+      "priceDesc": "Prix: décroissant",
+      "rating": "Évaluation"
+    }
+  },
+  "promo": {
+    "hotDeal": "Offre chaude",
+    "off": "de réduction",
+    "limitedTime": "Offre limitée",
+    "bigSale": {
+      "title": "Grandes soldes de saison",
+      "description": "Ne manquez pas les plus grandes réductions de la saison sur tous les produits"
+    },
+    "newArrivals": {
+      "title": "Nouveautés",
+      "description": "Découvrez les derniers produits de notre boutique"
+    },
+    "freeShipping": {
+      "title": "Livraison gratuite",
+      "description": "Sur toutes les commandes de plus de 200 MAD"
+    }
+  },
+  "testimonials": {
+    "customer1": {
+      "name": "Fatima Zahra",
+      "location": "Casablanca",
+      "review": "Excellente expérience d'achat ! Produits de haute qualité et livraison très rapide. Je reviendrai certainement"
+    },
+    "customer2": {
+      "name": "Mohamed Amine",
+      "location": "Rabat",
+      "review": "Service client excellent et prix compétitifs. Je recommande à tous de faire leurs achats ici"
+    },
+    "customer3": {
+      "name": "Sara Benali",
+      "location": "Marrakech",
+      "review": "Les produits correspondent parfaitement à la description et l'emballage était excellent. Merci Marka Tools"
+    }
+  },
+  "newsletter": {
+    "title": "Rejoignez notre liste WhatsApp",
+    "subtitle": "Recevez les dernières offres et réductions directement sur WhatsApp",
+    "placeholder": "Entrez votre numéro WhatsApp",
+    "button": "S'inscrire",
+    "submitting": "Inscription...",
+    "success": "Inscription réussie ! Nous vous contacterons bientôt sur WhatsApp.",
+    "error": "Une erreur s'est produite. Veuillez réessayer.",
+    "errorEmpty": "Veuillez entrer votre numéro WhatsApp",
+    "privacy": "Nous respectons votre vie privée et ne partagerons jamais vos données"
+  },
+  "footer": {
+    "description": "Votre destination shopping en ligne au Maroc. Nous offrons des produits de haute qualité à des prix compétitifs avec livraison rapide dans toutes les villes",
+    "categories": "Catégories",
+    "customerService": "Service client",
+    "legal": "Légal",
+    "rights": "Tous droits réservés",
+    "paymentMethods": "Modes de paiement:",
+    "help": "Centre d'aide",
+    "shipping": "Informations de livraison",
+    "trackOrder": "Suivre ma commande",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions générales",
+    "cookies": "Politique des cookies",
+    "trust": {
+      "shipping": "Livraison rapide",
+      "shippingDesc": "Dans toutes les villes",
+      "secure": "Paiement sécurisé",
+      "secureDesc": "Transactions 100% cryptées",
+      "payment": "Paiement à la livraison",
+      "paymentDesc": "Payez en espèces à la livraison",
+      "support": "Support continu",
+      "supportDesc": "Service client 24/7"
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "À propos de nous",
+      "title": "Notre histoire et vision",
+      "subtitle": "Nous nous efforçons d'offrir la meilleure expérience d'achat en ligne au Maroc avec des produits de haute qualité et un service client exceptionnel"
+    },
+    "story": {
+      "title": "Notre histoire",
+      "paragraph1": "Marka Tools a commencé comme un rêve simple : rendre le shopping en ligne facile et fiable pour tous les Marocains. Depuis notre création, nous travaillons dur pour offrir des produits variés à des prix compétitifs tout en garantissant la qualité du service.",
+      "paragraph2": "Aujourd'hui, nous sommes fiers de servir des milliers de clients à travers le Royaume, et nous continuons à améliorer nos services et à élargir notre gamme de produits pour répondre aux besoins de nos clients.",
+      "mission": {
+        "title": "Notre mission",
+        "description": "Offrir une expérience d'achat fluide et agréable avec des produits de haute qualité à des prix accessibles à tous"
+      },
+      "vision": {
+        "title": "Notre vision",
+        "description": "Devenir la destination numéro un pour le shopping en ligne au Maroc et dans la région"
+      }
+    },
+    "values": {
+      "title": "Nos valeurs",
+      "subtitle": "Les principes qui guident notre travail chaque jour",
+      "items": {
+        "quality": {
+          "title": "Qualité",
+          "description": "Nous nous engageons à fournir des produits de haute qualité qui répondent et dépassent les attentes de nos clients"
+        },
+        "trust": {
+          "title": "Confiance",
+          "description": "Nous construisons des relations à long terme avec nos clients basées sur la transparence et la crédibilité"
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "Nous cherchons toujours à améliorer nos services et à proposer de nouvelles solutions qui facilitent l'expérience d'achat"
+        },
+        "customer": {
+          "title": "Client d'abord",
+          "description": "La satisfaction client est notre priorité absolue et nous travaillons dur pour l'atteindre"
+        },
+        "community": {
+          "title": "Communauté",
+          "description": "Nous croyons en l'importance de contribuer au développement de notre communauté et de soutenir l'économie locale"
+        },
+        "sustainability": {
+          "title": "Durabilité",
+          "description": "Nous nous engageons dans des pratiques respectueuses de l'environnement et cherchons à réduire notre impact environnemental"
+        }
+      }
+    },
+    "team": {
+      "title": "Notre équipe",
+      "subtitle": "Découvrez les personnes qui travaillent dur pour vous offrir la meilleure expérience",
+      "members": {
+        "founder": {
+          "name": "Ahmed El Mansouri",
+          "role": "Fondateur & PDG"
+        },
+        "cto": {
+          "name": "Sara Benali",
+          "role": "Directrice Technique"
+        },
+        "operations": {
+          "name": "Mohamed El Fassi",
+          "role": "Directeur des Opérations"
+        },
+        "marketing": {
+          "name": "Fatima Zahra",
+          "role": "Directrice Marketing"
+        }
+      }
+    },
+    "whyChooseUs": {
+      "title": "Pourquoi nous choisir ?",
+      "subtitle": "Nous vous offrons la meilleure expérience d'achat avec des avantages exclusifs qui rendent vos achats plus faciles et plus sûrs",
+      "reasons": {
+        "fastDelivery": {
+          "title": "Livraison rapide",
+          "description": "Livraison en 24-48h pour Casablanca"
+        },
+        "securePayment": {
+          "title": "Paiement sécurisé",
+          "description": "Transactions 100% cryptées"
+        },
+        "support247": {
+          "title": "Support continu",
+          "description": "Service client 24/7"
+        },
+        "codAvailable": {
+          "title": "Paiement à la livraison",
+          "description": "Payez à la réception de votre commande"
+        },
+        "qualityGuarantee": {
+          "title": "Garantie de Qualité",
+          "description": "Qualité garantie pour tous les produits"
+        },
+        "nationwide": {
+          "title": "Couverture nationale",
+          "description": "Livraison dans toutes les villes du Royaume"
+        }
+      }
+    },
+    "stats": {
+      "products": "Produits",
+      "customers": "Clients satisfaits",
+      "cities": "Villes",
+      "satisfaction": "Satisfaction client"
+    },
+    "cta": {
+      "title": "Commencez vos achats maintenant",
+      "subtitle": "Découvrez des milliers de produits à des prix compétitifs avec livraison rapide à votre porte",
+      "contact": "Contactez-nous"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Contactez-nous",
+      "title": "Nous Contacter",
+      "subtitle": "Nous sommes là pour vous aider ! Envoyez-nous un message et nous vous répondrons dès que possible"
+    },
+    "form": {
+      "title": "Envoyez-nous un Message",
+      "subtitle": "Remplissez le formulaire ci-dessous et nous vous répondrons rapidement",
+      "name": "Nom Complet",
+      "namePlaceholder": "Entrez votre nom complet",
+      "email": "Adresse Email",
+      "emailPlaceholder": "Entrez votre adresse email",
+      "phone": "Numéro de Téléphone",
+      "phonePlaceholder": "Entrez votre numéro de téléphone",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Sélectionnez un sujet",
+      "message": "Message",
+      "messagePlaceholder": "Écrivez votre message ici...",
+      "submit": "Envoyer le Message",
+      "sending": "Envoi en cours...",
+      "subjects": {
+        "general": "Demande Générale",
+        "order": "État de la Commande",
+        "product": "Question sur un Produit",
+        "shipping": "Livraison & Expédition",
+        "guarantee": "Garantie de Qualité",
+        "other": "Autre"
+      },
+      "successMessage": "Votre message a été envoyé avec succès\\! Nous vous contacterons bientôt.",
+      "errorMessage": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
+    },
+    "info": {
+      "title": "Informations de Contact",
+      "subtitle": "Contactez-nous via l'un de ces canaux",
+      "phone": "Téléphone",
+      "email": "Email",
+      "address": "Adresse",
+      "hours": "Heures d'Ouverture",
+      "hoursValue": "Lun - Sam: 9h00 - 20h00",
+      "followUs": "Suivez-nous",
+      "mapPlaceholder": "La carte sera affichée ici"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions Fréquemment Posées",
+      "subtitle": "Trouvez les réponses aux questions les plus courantes sur nos services",
+      "stillHaveQuestions": "Vous avez encore des questions ? Nous sommes là pour vous aider !",
+      "contactUs": "Contactez-nous",
+      "items": {
+        "shipping": {
+          "question": "Combien de temps dure la livraison ?",
+          "answer": "Les délais de livraison varient selon la localisation. Pour Casablanca, les commandes sont généralement livrées en 24-48 heures. Pour les autres villes du Maroc, la livraison prend 2-5 jours ouvrables."
+        },
+        "payment": {
+          "question": "Quels modes de paiement acceptez-vous ?",
+          "answer": "Nous acceptons actuellement uniquement le paiement à la livraison (COD). Payez en espèces à la réception de votre commande."
+        },
+        "tracking": {
+          "question": "Comment puis-je suivre ma commande ?",
+          "answer": "Une fois votre commande expédiée, vous recevrez un numéro de suivi par SMS et email. Vous pouvez utiliser ce numéro pour suivre l'état de votre commande sur notre site web."
+        },
+        "delivery": {
+          "question": "Livrez-vous dans toutes les villes du Maroc ?",
+          "answer": "Oui ! Nous livrons dans toutes les villes et régions du Maroc. La livraison est gratuite pour les commandes de plus de 200 MAD."
+        },
+        "cod": {
+          "question": "Le paiement à la livraison est-il disponible ?",
+          "answer": "Oui, le paiement à la livraison (COD) est disponible pour toutes les commandes au Maroc. Vous pouvez payer en espèces à la réception de votre commande."
+        },
+        "guarantee": {
+          "question": "Quelle est votre garantie de qualité ?",
+          "answer": "Nous garantissons la qualité de tous nos produits. Si vous n'êtes pas satisfait de la qualité du produit, vous pouvez nous contacter dans la période de garantie spécifiée et nous résoudrons le problème."
+        }
+      }
+    }
+  },
+  "cart": {
+    "title": "Panier",
+    "empty": "Votre panier est vide",
+    "emptyDesc": "Vous n'avez pas encore ajouté de produits à votre panier",
+    "continueShopping": "Continuer les achats",
+    "savings": "Vos économies",
+    "total": "Total",
+    "checkout": "Passer à la caisse",
+    "itemAdded": "Ajouté au panier"
+  },
+  "checkout": {
+    "title": "Finaliser la commande",
+    "itemCount": "{count} articles dans le panier",
+    "orderSummary": "Récapitulatif de la commande",
+    "paymentTitle": "Informations de livraison",
+    "paymentMethod": "Mode de paiement",
+    "codOnly": "Paiement à la livraison uniquement",
+    "codDescription": "Payez en espèces à la réception de votre commande",
+    "success": {
+      "title": "Commande reçue !",
+      "orderNumber": "Numéro de Commande",
+      "message": "Merci ! Nous vous contacterons bientôt pour confirmer votre commande et organiser la livraison.",
+      "continueShopping": "Continuer les achats"
+    },
+    "form": {
+      "error": "Une erreur s'est produite. Veuillez vérifier vos informations et réessayer."
+    }
+  },
+  "productPage": {
+    "addToCart": "Ajouter au panier",
+    "reviewsCount": "avis",
+    "sold": "vendus",
+    "highlightsTitle": "Points Forts",
+    "sections": {
+      "shortDescription": "Aperçu Rapide",
+      "fullDescription": "Description Complète",
+      "shippingInfo": "Informations de Livraison"
+    },
+    "shipping": {
+      "deliveryTime": {
+        "title": "Délai de Livraison",
+        "intro": "Nous offrons une livraison rapide dans toutes les villes :",
+        "casablanca": "Casablanca :",
+        "casablancaTime": "1-2 jours ouvrables",
+        "majorCities": "Autres grandes villes :",
+        "majorCitiesTime": "2-3 jours ouvrables",
+        "otherCities": "Autres villes :",
+        "otherCitiesTime": "3-5 jours ouvrables",
+        "shippingTime": "Les commandes sont expédiées dans les 24 heures suivant la confirmation de la commande."
+      },
+      "shippingCost": {
+        "title": "Frais de Livraison",
+        "freeShipping": "livraison gratuite pour les commandes de plus de 200 MAD",
+        "intro": "Nous offrons la",
+        "underMinTitle": "Pour les commandes de moins de 200 MAD :",
+        "localShipping": "Livraison locale : 20 MAD",
+        "outsideShipping": "Livraison hors ville : 35 MAD"
+      },
+      "trackingOrder": {
+        "title": "Suivi de Commande",
+        "intro": "Après l'expédition de votre commande, vous recevrez un",
+        "trackingNumber": "numéro de suivi par SMS ou email",
+        "usage": "Vous pouvez utiliser le numéro de suivi pour vérifier l'emplacement de votre commande à tout moment via la page de suivi des commandes sur notre site."
+      },
+      "returnPolicy": {
+        "title": "Politique de Retour",
+        "intro": "Nous offrons une",
+        "guarantee": "garantie de remboursement de 7 jours",
+        "fromReceipt": "à compter de la réception du produit.",
+        "conditionsTitle": "Conditions de retour :",
+        "condition1": "Le produit doit être dans son état d'origine",
+        "condition2": "Doit être dans son emballage d'origine",
+        "condition3": "Le produit ne doit pas avoir été utilisé",
+        "contact": "Pour un retour, veuillez contacter le service client."
+      }
+    },
+    "trust": {
+      "freeShipping": "Livraison Gratuite",
+      "freeShippingDesc": "Pour les commandes +200 MAD",
+      "guarantee": "Garantie Qualité",
+      "days": "jours",
+      "securePayment": "Paiement Sécurisé",
+      "securePaymentDesc": "Transactions 100% cryptées"
+    },
+    "urgency": {
+      "lowStock": "Stock Limité !",
+      "onlyLeft": "Plus que {count} en stock",
+      "viewingNow": "personnes regardent ce produit",
+      "limitedOffer": "Offre Limitée",
+      "endsIn": "Se termine dans :"
+    },
+    "social": {
+      "rating": "Note",
+      "reviews": "Avis",
+      "sold": "Vendus",
+      "recentPurchases": "Achats Récents",
+      "someoneFrom": "Quelqu'un de",
+      "minutesAgo": "il y a {minutes} minutes",
+      "verifiedSeller": "Vendeur Vérifié",
+      "qualityGuarantee": "Garantie Qualité",
+      "fastDelivery": "Livraison Rapide"
+    },
+    "checkout": {
+      "title": "Commander",
+      "subtitle": "Paiement à la livraison",
+      "product": "Produit",
+      "quantity": "Quantité",
+      "unitPrice": "Prix Unitaire",
+      "savings": "Économies",
+      "total": "Total",
+      "name": "Nom Complet",
+      "namePlaceholder": "Entrez votre nom complet",
+      "phone": "Numéro de Téléphone",
+      "phonePlaceholder": "Entrez votre numéro de téléphone",
+      "address": "Adresse de Livraison",
+      "addressPlaceholder": "Entrez votre adresse complète (ville, quartier, rue...)",
+      "codNotice": "Payez à la réception - Aucun paiement anticipé requis",
+      "placeOrder": "Passer la Commande",
+      "processing": "Traitement en cours...",
+      "secure": "Votre commande est protégée et sécurisée",
+      "selectOffer": "Sélectionnez une offre spéciale",
+      "regularPrice": "Prix Régulier",
+      "orderError": "Échec de la commande",
+      "orderErrorRetry": "Échec de la commande. Veuillez réessayer."
+    },
+    "relatedProducts": {
+      "subtitle": "Découvrez plus de produits incroyables"
+    },
+    "reviews": {
+      "title": "Avis Clients",
+      "basedOn": "Basé sur {count} avis",
+      "verified": "Acheteur Vérifié",
+      "helpful": "Utile",
+      "loadMore": "Charger Plus d'Avis",
+      "reviewer1": {
+        "name": "Ahmed de Casablanca",
+        "date": "il y a 3 jours",
+        "comment": "Excellent produit, haute qualité et livraison rapide. Je recommande à tous d'acheter dans ce magasin."
+      },
+      "reviewer2": {
+        "name": "Fatima de Rabat",
+        "date": "il y a 1 semaine",
+        "comment": "Très satisfaite du produit, exactement comme décrit et excellent rapport qualité-prix."
+      },
+      "reviewer3": {
+        "name": "Mohamed de Marrakech",
+        "date": "il y a 2 semaines",
+        "comment": "Excellente expérience d'achat, service client serviable et le produit est arrivé en parfait état."
+      }
+    },
+    "highlights": {
+      "wireless": "Connexion Sans Fil",
+      "battery": "Longue Autonomie",
+      "noiseCancel": "Réduction du Bruit",
+      "waterproof": "Résistant à l'Eau",
+      "smartFeatures": "Fonctions Intelligentes",
+      "healthTrack": "Suivi Santé",
+      "longBattery": "Batterie Longue Durée",
+      "heating": "Technologie de Chauffage Électrique",
+      "vibration": "Fonction Vibration & Massage",
+      "portable": "Design Portable et Pratique",
+      "painRelief": "Soulagement Efficace de la Douleur",
+      "rotating": "Mécanisme de Rotation Élégant",
+      "elegant": "Design Luxueux et Élégant",
+      "giftReady": "Prêt à Offrir",
+      "unique": "Design Unique et Innovant"
+    },
+    "cta": {
+      "primary": {
+        "title": "Prêt à Essayer Quelque Chose d'Incroyable?",
+        "description": "Commandez maintenant et profitez d'une livraison rapide avec paiement sécurisé à la livraison",
+        "button": "Acheter Maintenant"
+      },
+      "secondary": {
+        "title": "Livraison Rapide dans Toutes les Villes",
+        "description": "Nous livrons à votre porte en moins de 48 heures avec garantie de qualité totale",
+        "button": "Découvrir Plus"
+      },
+      "accent": {
+        "title": "Offres Exclusives Vous Attendent",
+        "description": "Ne manquez pas les meilleurs produits à des prix imbattables",
+        "button": "Voir les Offres"
+      },
+      "trust": {
+        "secure": "Paiement 100% Sécurisé",
+        "freeShipping": "Livraison Gratuite",
+        "quality": "Qualité Garantie"
+      }
+    },
+    "announcementBar": {
+      "freeShipping": "Livraison Gratuite pour Commandes +200 MAD",
+      "securePayment": "Paiement 100% Sécurisé et Garanti",
+      "fastDelivery": "Livraison Rapide en 24-48 Heures",
+      "support": "Support Client Disponible 24/7",
+      "qualityProducts": "Produits de Haute Qualité",
+      "cashOnDelivery": "Paiement à la Livraison Disponible",
+      "topRated": "Noté 5 Étoiles par les Clients",
+      "easyReturns": "Retours Faciles Sous 7 Jours"
+    }
+  },
+  "admin": {
+    "nav": {
+      "title": "Panneau Admin",
+      "subtitle": "Gérer votre boutique",
+      "addProduct": "Ajouter Produit",
+      "orders": "Commandes",
+      "products": "Produits",
+      "whatsappSubscribers": "Abonnés WhatsApp",
+      "backToStore": "Retour à la Boutique",
+      "contacts": "Messages",
+      "settings": "Paramètres"
+    },
+    "orders": {
+      "title": "Commandes",
+      "subtitle": "Voir et gérer les commandes clients",
+      "noOrders": "Aucune commande trouvée",
+      "noOrdersDesc": "Les commandes apparaîtront ici lorsque les clients les passeront",
+      "orderNumber": "Commande #",
+      "customer": "Client",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "products": "Produits",
+      "total": "Total",
+      "status": "Statut",
+      "date": "Date",
+      "statusPending": "En attente",
+      "statusConfirmed": "Confirmée",
+      "statusProcessing": "En traitement",
+      "statusShipped": "Expédiée",
+      "statusDelivered": "Livrée",
+      "statusCancelled": "Annulée",
+      "updateStatus": "Modifier le statut",
+      "viewDetails": "Voir détails",
+      "searchPlaceholder": "Rechercher par n° commande, nom ou téléphone...",
+      "filterByStatus": "Filtrer par statut",
+      "allStatuses": "Tous les statuts",
+      "totalOrders": "Total Commandes",
+      "totalRevenue": "Chiffre d'Affaires",
+      "pendingOrders": "En attente",
+      "completedOrders": "Complétées"
+    },
+    "whatsappSubscribers": {
+      "title": "Abonnés WhatsApp",
+      "subtitle": "Gérer la liste des abonnés WhatsApp",
+      "totalSubscribers": "Total Abonnés",
+      "activeSubscribers": "Abonnés Actifs",
+      "unsubscribed": "Désabonnés",
+      "phoneNumber": "Numéro de Téléphone",
+      "status": "Statut",
+      "subscribedAt": "Date d'Inscription",
+      "actions": "Actions",
+      "active": "Actif",
+      "unsubscribedStatus": "Désabonné",
+      "delete": "Supprimer",
+      "copyAll": "Copier Tout",
+      "refresh": "Actualiser",
+      "searchPlaceholder": "Rechercher par numéro...",
+      "allStatuses": "Tous les Statuts",
+      "noSubscribers": "Aucun Abonné",
+      "noSubscribersDesc": "Personne ne s'est encore abonné à la liste WhatsApp"
+    },
+    "settings": {
+      "title": "Paramètres de Suivi",
+      "subtitle": "Gérer les pixels de suivi et les analyses",
+      "infoTitle": "Configuration des Pixels de Suivi",
+      "infoDescription": "Ajoutez vos identifiants de pixel pour suivre les visiteurs, les conversions et les événements sur les plateformes de médias sociaux et de publicité.",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "save": "Enregistrer",
+      "saving": "Enregistrement...",
+      "saveSuccess": "Paramètres enregistrés avec succès",
+      "saveError": "Échec de l'enregistrement des paramètres",
+      "instructionsTitle": "Comment Configurer",
+      "instruction1": "Obtenez votre identifiant de pixel depuis votre plateforme publicitaire (Facebook Ads Manager, Google Analytics, etc.)",
+      "instruction2": "Collez l'identifiant de pixel dans le champ approprié ci-dessus",
+      "instruction3": "Cliquez sur le bouton 'Enregistrer' pour stocker l'identifiant de pixel",
+      "instruction4": "Activez le commutateur pour commencer à suivre les événements sur votre site web"
+    },
+    "pin": {
+      "title": "Accès Administrateur",
+      "subtitle": "Entrez votre code PIN à 6 chiffres pour continuer",
+      "verifying": "Vérification...",
+      "invalid": "Code PIN invalide",
+      "connectionError": "Erreur de connexion. Veuillez réessayer.",
+      "secureAuth": "Authentification administrateur sécurisée"
+    },
+    "addProduct": {
+      "title": "Ajouter un Nouveau Produit",
+      "subtitle": "Remplissez les détails du produit ci-dessous",
+      "basicInfo": "Informations de Base",
+      "productName": "Nom du Produit",
+      "productNamePlaceholder": "Entrez le nom du produit",
+      "slug": "Slug",
+      "slugPlaceholder": "url-du-produit",
+      "sku": "SKU",
+      "skuPlaceholder": "SKU-001",
+      "category": "Catégorie",
+      "selectCategory": "Sélectionner une catégorie",
+      "descriptions": "Descriptions",
+      "shortDescription": "Description Courte",
+      "shortDescriptionPlaceholder": "Résumé bref du produit (1-2 phrases)",
+      "fullDescription": "Description Complète",
+      "fullDescriptionPlaceholder": "Description détaillée du produit",
+      "pricingStock": "Prix et Stock",
+      "price": "Prix (MAD)",
+      "pricePlaceholder": "299.00",
+      "originalPrice": "Prix Original (MAD)",
+      "originalPricePlaceholder": "399.00 (pour les articles en solde)",
+      "stockCount": "Quantité en Stock",
+      "stockCountPlaceholder": "100",
+      "badge": "Badge",
+      "selectBadge": "Sélectionner un badge (optionnel)",
+      "noBadge": "Aucun Badge",
+      "badgeNew": "Nouveau",
+      "badgeSale": "Solde",
+      "badgeBestseller": "Meilleure Vente",
+      "guaranteeDays": "Jours de Garantie",
+      "rating": "Note",
+      "reviewCount": "Nombre d'avis",
+      "soldCount": "Nombre de ventes",
+      "viewersCount": "Visiteurs actuels",
+      "images": "Images du Produit",
+      "uploadImages": "Cliquez pour télécharger des images",
+      "imageFormats": "JPEG, PNG, WebP, GIF (max 10 Mo chacun)",
+      "mainImage": "Principale",
+      "setAsMain": "Définir comme image principale",
+      "removeImage": "Supprimer l'image",
+      "highlights": "Points Forts du Produit",
+      "highlightPlaceholder": "Point fort {number} (ex: \"Design étanche\")",
+      "addHighlight": "Ajouter un Point Fort",
+      "features": "Caractéristiques du Produit",
+      "feature": "Caractéristique",
+      "featureIcon": "Choisir une icône",
+      "featureTitle": "Titre de la caractéristique",
+      "featureDescription": "Description de la caractéristique",
+      "addFeature": "Ajouter une Caractéristique",
+      "offers": "Offres Spéciales",
+      "offer": "Offre",
+      "offerIcon": "Choisir une icône",
+      "offerText": "Texte de l'offre",
+      "offerPrice": "Prix (MAD)",
+      "addOffer": "Ajouter une Offre",
+      "createProduct": "Créer le Produit",
+      "creating": "Création du produit...",
+      "success": "Produit \"{name}\" créé avec succès !",
+      "error": "Échec de la création du produit",
+      "uploadError": "Veuillez télécharger au moins une image",
+      "required": "Requis",
+      "reviews": "Avis des clients",
+      "review": "Avis",
+      "reviewerName": "Nom du client",
+      "reviewText": "Texte de l'avis",
+      "reviewDate": "Date (ex: il y a 2 semaines)",
+      "reviewRating": "Note (1-5)",
+      "verifiedBuyer": "Acheteur vérifié",
+      "reviewScreenshots": "Captures d'écran (optionnel)",
+      "addScreenshot": "Ajouter une capture",
+      "addReview": "Ajouter un avis",
+      "googleSheetsIntegration": "Intégration Google Sheets",
+      "googleSheetId": "ID de feuille Google (Spreadsheet ID)",
+      "googleSheetIdPlaceholder": "1AbC2dEf3GhI4jKl5MnO6pQr7StU8vWx9YzA0BcD1EfG",
+      "googleSheetIdHelp": "Optionnel : Saisissez l'ID complet de la feuille Google depuis l'URL. Si vide, la feuille par défaut sera utilisée.",
+      "googleSheetDisclaimer": "Pour que les commandes soient enregistrées dans Google Sheets, le fichier doit être partagé avec cet email de service :",
+      "iconSelector": {
+        "selectIcon": "Choisir une icône",
+        "searchIcons": "Rechercher des icônes...",
+        "manualEntry": "Saisie manuelle",
+        "manualPlaceholder": "Ex: IconBattery",
+        "allCategories": "Toutes",
+        "noIconsFound": "Aucune icône trouvée",
+        "categories": {
+          "technology": "Technologie",
+          "devices": "Appareils",
+          "audio": "Audio",
+          "power": "Énergie",
+          "security": "Sécurité",
+          "weather": "Météo",
+          "nature": "Nature",
+          "food": "Nourriture",
+          "home": "Maison",
+          "transport": "Transport",
+          "time": "Temps",
+          "people": "Personnes",
+          "sports": "Sports",
+          "fashion": "Mode",
+          "shopping": "Shopping",
+          "office": "Bureau",
+          "communication": "Communication",
+          "health": "Santé",
+          "science": "Science",
+          "animals": "Animaux",
+          "kitchen": "Cuisine",
+          "entertainment": "Divertissement",
+          "music": "Musique",
+          "charts": "Graphiques",
+          "status": "Statut"
+        }
+      }
+    },
+    "richTextEditor": {
+      "toolbar": {
+        "bold": "Gras",
+        "italic": "Italique",
+        "underline": "Souligné",
+        "strike": "Barré",
+        "heading1": "Titre 1",
+        "heading2": "Titre 2",
+        "heading3": "Titre 3",
+        "bulletList": "Liste à puces",
+        "orderedList": "Liste numérotée",
+        "alignLeft": "Aligner à gauche",
+        "alignCenter": "Centrer",
+        "alignRight": "Aligner à droite",
+        "link": "Lien",
+        "image": "Image",
+        "undo": "Annuler",
+        "redo": "Rétablir",
+        "clearFormat": "Effacer le formatage",
+        "save": "Enregistrer",
+        "cancel": "Annuler",
+        "removeLink": "Supprimer le lien"
+      },
+      "imageUpload": {
+        "uploading": "Téléchargement...",
+        "error": "Échec du téléchargement de l'image",
+        "invalidType": "Type de fichier invalide. Autorisés: JPEG, PNG, WebP, GIF",
+        "tooLarge": "Fichier trop volumineux. Maximum 10 Mo"
+      }
+    },
+    "contacts": {
+      "title": "Messages de contact",
+      "subtitle": "Gérer les messages des clients",
+      "totalMessages": "Total des messages",
+      "newMessages": "Nouveaux messages",
+      "readMessages": "Messages lus",
+      "repliedMessages": "Messages répondus",
+      "searchPlaceholder": "Rechercher par nom, email ou sujet...",
+      "allStatuses": "Tous les statuts",
+      "statusNew": "Nouveau",
+      "statusRead": "Lu",
+      "statusReplied": "Répondu",
+      "noMessages": "Aucun message",
+      "noMessagesDesc": "Aucun message reçu pour le moment",
+      "showMore": "Afficher plus",
+      "showLess": "Afficher moins"
+    }
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "subtitle": "Comment nous protégeons et utilisons vos données personnelles",
+    "description": "Découvrez comment nous collectons, utilisons et protégeons vos informations personnelles",
+    "lastUpdated": "Dernière Mise à Jour",
+    "introduction": "Nous nous engageons à protéger votre vie privée. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations personnelles lorsque vous utilisez notre site web.",
+    "sections": {
+      "collection": {
+        "title": "Collecte d'Informations",
+        "content": "Nous collectons les informations que vous fournissez lors de la passation d'une commande, y compris le nom, le numéro de téléphone et l'adresse. Nous utilisons ces informations uniquement pour traiter et livrer votre commande."
+      },
+      "usage": {
+        "title": "Utilisation des Informations",
+        "content": "Nous utilisons vos informations pour traiter les commandes, communiquer avec vous au sujet de votre commande et améliorer nos services. Nous ne partagerons pas vos informations avec des tiers sans votre consentement."
+      },
+      "sharing": {
+        "title": "Partage d'Informations",
+        "content": "Nous ne vendons ni ne louons vos informations personnelles à des tiers. Nous pouvons partager vos informations avec nos partenaires de livraison uniquement pour compléter votre commande."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "Nous utilisons des cookies pour améliorer votre expérience sur notre site. Vous pouvez contrôler les cookies via les paramètres de votre navigateur."
+      }
+    },
+    "contactTitle": "Questions sur la Confidentialité?",
+    "contactText": "Si vous avez des questions concernant notre politique de confidentialité, veuillez nous contacter."
+  },
+  "terms": {
+    "title": "Conditions Générales",
+    "subtitle": "Conditions d'utilisation de notre site et de nos services",
+    "description": "Lisez les conditions générales d'utilisation d'Marka Tools",
+    "lastUpdated": "Dernière Mise à Jour",
+    "introduction": "En utilisant notre site web et nos services, vous acceptez les conditions générales suivantes. Veuillez les lire attentivement.",
+    "sections": {
+      "orders": {
+        "title": "Commandes et Achats",
+        "content": "En passant une commande, vous acceptez de fournir des informations exactes et complètes. Nous nous réservons le droit de refuser ou d'annuler toute commande pour quelque raison que ce soit."
+      },
+      "payment": {
+        "title": "Paiement",
+        "content": "Nous acceptons uniquement le paiement à la livraison (COD). Le paiement intégral en espèces doit être effectué à la réception de votre commande. Tous les prix sont en Dirham Marocain (MAD)."
+      },
+      "delivery": {
+        "title": "Livraison",
+        "content": "Nous faisons de notre mieux pour livrer dans les délais prévus, mais les délais de livraison sont des estimations et ne peuvent être garantis. Vous êtes responsable de la réception de la commande à l'adresse fournie."
+      },
+      "liability": {
+        "title": "Responsabilité",
+        "content": "Nous sommes responsables de la qualité des produits fournis. S'il y a un défaut dans le produit à la livraison, veuillez nous contacter immédiatement."
+      }
+    },
+    "contactTitle": "Avez-vous des Questions?",
+    "contactText": "Si vous avez des questions concernant ces conditions, veuillez nous contacter."
+  },
+  "cookies": {
+    "title": "Politique des Cookies",
+    "subtitle": "Comment nous utilisons les cookies sur notre site",
+    "description": "Découvrez notre utilisation des cookies",
+    "lastUpdated": "Dernière Mise à Jour",
+    "introduction": "Nous utilisons des cookies pour améliorer votre expérience sur notre site. Cette politique explique ce que sont les cookies et comment nous les utilisons.",
+    "sections": {
+      "what": {
+        "title": "Qu'est-ce que les Cookies?",
+        "content": "Les cookies sont de petits fichiers texte stockés sur votre appareil lorsque vous visitez un site web. Ces fichiers nous aident à mémoriser vos préférences et à améliorer votre expérience."
+      },
+      "types": {
+        "title": "Types de Cookies",
+        "content": "Nous utilisons des cookies nécessaires pour faire fonctionner le site et des cookies analytiques pour comprendre comment les visiteurs utilisent le site."
+      },
+      "purpose": {
+        "title": "But de l'Utilisation",
+        "content": "Nous utilisons des cookies pour mémoriser votre panier, vos préférences linguistiques et pour analyser le trafic du site web."
+      },
+      "manage": {
+        "title": "Gérer les Cookies",
+        "content": "Vous pouvez contrôler ou supprimer les cookies via les paramètres de votre navigateur. Notez que la désactivation des cookies peut affecter les fonctionnalités du site."
+      }
+    },
+    "contactTitle": "Avez-vous des Questions?",
+    "contactText": "Si vous avez des questions concernant notre utilisation des cookies, veuillez nous contacter."
+  },
+  "help": {
+    "title": "Centre d'Aide",
+    "subtitle": "Nous sommes là pour vous aider",
+    "description": "Obtenez de l'aide et des réponses à vos questions",
+    "quickLinksTitle": "Comment pouvons-nous vous aider?",
+    "links": {
+      "orderStatus": "État de Commande",
+      "orderStatusDesc": "Vérifiez ou suivez l'état de votre commande",
+      "contact": "Contactez-Nous",
+      "contactDesc": "Contactez notre équipe de support",
+      "whatsapp": "Support WhatsApp",
+      "whatsappDesc": "Discutez avec nous directement sur WhatsApp"
+    },
+    "openLink": "Ouvrir",
+    "goTo": "Aller à",
+    "stillNeedHelp": "Besoin d'Aide?",
+    "stillNeedHelpDesc": "Notre équipe est prête à répondre à vos questions",
+    "contactUs": "Contactez-Nous"
+  },
+  "shipping": {
+    "title": "Informations de Livraison",
+    "subtitle": "Tout ce que vous devez savoir sur la livraison",
+    "description": "Découvrez notre politique d'expédition et de livraison",
+    "features": {
+      "fast": {
+        "title": "Livraison Rapide",
+        "desc": "Livraison rapide dans tout le Maroc"
+      },
+      "cod": {
+        "title": "Paiement à la Livraison",
+        "desc": "Payez en espèces à la réception de votre commande"
+      },
+      "tracking": {
+        "title": "Suivi de Commande",
+        "desc": "Suivez votre commande à chaque étape"
+      }
+    },
+    "deliveryTimesTitle": "Délais de Livraison",
+    "deliveryTimesDesc": "Les délais de livraison varient selon l'emplacement",
+    "zones": {
+      "casablanca": {
+        "title": "Casablanca",
+        "time": "24-48 heures"
+      },
+      "major": {
+        "title": "Grandes Villes (Rabat, Marrakech, Fès, Tanger)",
+        "time": "2-3 jours ouvrables"
+      },
+      "other": {
+        "title": "Autres Villes",
+        "time": "3-5 jours ouvrables"
+      }
+    },
+    "howItWorksTitle": "Comment Fonctionne la Livraison",
+    "steps": {
+      "step1": {
+        "title": "Passez Votre Commande",
+        "desc": "Choisissez vos produits et complétez la commande"
+      },
+      "step2": {
+        "title": "Confirmation de Commande",
+        "desc": "Nous vous appellerons pour confirmer votre commande et l'adresse de livraison"
+      },
+      "step3": {
+        "title": "Préparation et Expédition",
+        "desc": "Nous préparons et expédions votre commande"
+      },
+      "step4": {
+        "title": "Recevez Votre Commande",
+        "desc": "Recevez votre commande et payez en espèces"
+      }
+    },
+    "coverageTitle": "Nous Livrons Dans Tout le Maroc",
+    "coverageDesc": "Nous fournissons un service de livraison dans toutes les villes et régions du Royaume du Maroc"
+  },
+  "trackOrder": {
+    "title": "Suivre Votre Commande",
+    "phoneLabel": "Numéro de Téléphone",
+    "phonePlaceholder": "Entrez votre numéro de téléphone",
+    "search": "Rechercher",
+    "searching": "Recherche en cours...",
+    "notFound": "Aucune commande trouvée avec ce numéro de téléphone",
+    "error": "Une erreur s'est produite, veuillez réessayer",
+    "orderNumber": "Numéro de Commande",
+    "customerName": "Nom du Client",
+    "orderDate": "Date de Commande",
+    "city": "Ville",
+    "total": "Total",
+    "deliveryAddress": "Adresse de Livraison",
+    "orderItems": "Articles de la Commande",
+    "quantity": "Quantité",
+    "needHelp": "Besoin d'Aide?",
+    "contactSupport": "Contactez notre équipe de support pour une assistance supplémentaire",
+    "emptyState": "Entrez votre numéro de téléphone pour suivre votre commande",
+    "foundOrders": "{count} commandes trouvées",
+    "item": "article",
+    "items": "articles",
+    "backToOrders": "Retour à la liste des commandes",
+    "status": {
+      "pending": "En Attente",
+      "confirmed": "Confirmée",
+      "processing": "En Préparation",
+      "shipped": "Expédiée",
+      "delivered": "Livrée",
+      "cancelled": "Annulée"
+    }
+  },
+  "notFound": {
+    "title": "Page Non Trouvée",
+    "error": "404",
+    "message": "Désolé, la page que vous recherchez n'existe pas ou a été déplacée",
+    "description": "La page a peut-être été supprimée ou déplacée, ou peut-être qu'elle n'a jamais existé",
+    "backHome": "Retour à l'Accueil",
+    "browseProducts": "Parcourir les Produits",
+    "helpText": "Si vous pensez qu'il s'agit d'une erreur, veuillez nous contacter"
+  }
+}

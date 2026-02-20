@@ -1,0 +1,53 @@
+{
+    "name": "Wireless Bluetooth Earbuds Pro",
+    "slug": "wireless-bluetooth-earbuds-pro",
+    "sku": "WBE-PRO-001",
+    "categoryId": "electronics",
+    "description": "Experience premium sound quality with our latest Wireless Bluetooth Earbuds Pro. Featuring active noise cancellation, 30-hour battery life, and crystal-clear call quality. Perfect for music lovers, professionals, and anyone on the go. IPX7water-resistant design ensures durability in any weather.","shortDescription": "Premium wireless earbuds with active noise cancellation and 30-hour battery life",
+    "price": 299,
+    "originalPrice": 499,
+    "stockCount": 150,
+    "badge": "sale",
+    "guaranteeDays": 365,
+    "rating": 4.8,
+    "reviewCount": 247,
+    "soldCount": 1523,
+    "viewersCount": 3847,
+    "image": "https://amanaexpress.s3.us-east-1.amazonaws.com/products/earbuds-main.jpg",
+    "images": [
+        "https://amanaexpress.s3.us-east-1.amazonaws.com/products/earbuds-main.jpg",
+        "https://amanaexpress.s3.us-east-1.amazonaws.com/products/earbuds-case.jpg",
+        "https://amanaexpress.s3.us-east-1.amazonaws.com/products/earbuds-features.jpg",
+        "https://amanaexpress.s3.us-east-1.amazonaws.com/products/earbuds-lifestyle.jpg"
+    ],
+    "highlights": [
+        "Active Noise Cancellation (ANC)",
+        "30-hour battery life with charging case",
+        "IPX7 water-resistant",
+        "Bluetooth 5.3 for stable connection",
+        "Touch controls",
+        "Fast charging - 10 min = 2 hours playback"
+    ],
+    "features": [
+        {
+            "icon": "volume",
+            "title": "Premium Sound Quality",
+            "description": "Enjoy rich, balanced audio with deep bass and crystal-clear highs powered by advanced acoustic drivers"
+        },
+        {
+            "icon": "battery",
+            "title": "All-Day Battery",
+            "description": "Up to 8 hours on a single charge, 30 hours total with the charging case. Fast charging gives you 2 hours from just 10 minutes"
+        },
+        {
+            "icon": "microphone",
+            "title": "Clear Calls",
+            "description": "4-mic array with AI noise reduction ensures your voice is heard clearly even in noisy environments"
+        },
+        {
+            "icon": "droplet",
+            "title": "Water Resistant",
+            "description": "IPX7 rating protects against sweat and rain, perfect for workouts and outdoor activities"
+        }
+    ]
+}
