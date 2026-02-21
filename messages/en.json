@@ -11,7 +11,7 @@
     "home": "Home"
   },
   "header": {
-    "freeShippingBanner": "Free shipping on orders over 200 MAD",
+    "freeShippingBanner": "Free shipping on all orders",
     "welcome": "Welcome to Marka Tools",
     "searchPlaceholder": "Search for products...",
     "cart": "Cart"
@@ -35,7 +35,7 @@
     },
     "features": {
       "freeShipping": "Free Shipping",
-      "freeShippingDesc": "On orders over 200 MAD",
+      "freeShippingDesc": "On all orders",
       "securePayment": "Secure Payment",
       "securePaymentDesc": "Multiple payment methods",
       "support": "24/7 Support",
@@ -165,7 +165,7 @@
     },
     "freeShipping": {
       "title": "Free Shipping",
-      "description": "On all orders over 200 MAD"
+      "description": "On all orders"
     }
   },
   "testimonials": {
@@ -397,7 +397,7 @@
         },
         "delivery": {
           "question": "Do you deliver to all cities in Morocco?",
-          "answer": "Yes! We deliver to all cities and regions across Morocco. Shipping is free for orders over 200 MAD."
+          "answer": "Yes! We deliver to all cities and regions across Morocco. Shipping is always free."
         },
         "cod": {
           "question": "Is cash on delivery available?",
@@ -462,9 +462,9 @@
       },
       "shippingCost": {
         "title": "Shipping Cost",
-        "freeShipping": "free shipping on orders over 200 MAD",
+        "freeShipping": "free shipping on all orders",
         "intro": "We offer",
-        "underMinTitle": "For orders under 200 MAD:",
+        "underMinTitle": "Shipping is free for all orders:",
         "localShipping": "Local shipping: 20 MAD",
         "outsideShipping": "Out-of-city shipping: 35 MAD"
       },
@@ -488,7 +488,7 @@
     },
     "trust": {
       "freeShipping": "Free Shipping",
-      "freeShippingDesc": "On orders over 200 MAD",
+      "freeShippingDesc": "On all orders",
       "guarantee": "Quality Guarantee",
       "days": "days",
       "securePayment": "Secure Payment",
@@ -600,7 +600,7 @@
       }
     },
     "announcementBar": {
-      "freeShipping": "Free Shipping on Orders Over 200 MAD",
+      "freeShipping": "Free Shipping on All Orders",
       "securePayment": "100% Secure & Safe Payment",
       "fastDelivery": "Fast Delivery Within 24-48 Hours",
       "support": "24/7 Customer Support Available",

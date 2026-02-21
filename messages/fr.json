@@ -11,7 +11,7 @@
     "home": "Accueil"
   },
   "header": {
-    "freeShippingBanner": "Livraison gratuite pour les commandes de plus de 200 MAD",
+    "freeShippingBanner": "Livraison gratuite sur toutes les commandes",
     "welcome": "Bienvenue chez Marka Tools",
     "searchPlaceholder": "Rechercher des produits...",
     "cart": "Panier"
@@ -35,7 +35,7 @@
     },
     "features": {
       "freeShipping": "Livraison gratuite",
-      "freeShippingDesc": "Pour les commandes de plus de 200 MAD",
+      "freeShippingDesc": "Sur toutes les commandes",
       "securePayment": "Paiement sécurisé",
       "securePaymentDesc": "Plusieurs méthodes de paiement",
       "support": "Support 24/7",
@@ -165,7 +165,7 @@
     },
     "freeShipping": {
       "title": "Livraison gratuite",
-      "description": "Sur toutes les commandes de plus de 200 MAD"
+      "description": "Sur toutes les commandes"
     }
   },
   "testimonials": {
@@ -397,7 +397,7 @@
         },
         "delivery": {
           "question": "Livrez-vous dans toutes les villes du Maroc ?",
-          "answer": "Oui ! Nous livrons dans toutes les villes et régions du Maroc. La livraison est gratuite pour les commandes de plus de 200 MAD."
+          "answer": "Oui ! Nous livrons dans toutes les villes et régions du Maroc. La livraison est toujours gratuite."
         },
         "cod": {
           "question": "Le paiement à la livraison est-il disponible ?",
@@ -462,9 +462,9 @@
       },
       "shippingCost": {
         "title": "Frais de Livraison",
-        "freeShipping": "livraison gratuite pour les commandes de plus de 200 MAD",
+        "freeShipping": "livraison gratuite sur toutes les commandes",
         "intro": "Nous offrons la",
-        "underMinTitle": "Pour les commandes de moins de 200 MAD :",
+        "underMinTitle": "La livraison est gratuite pour toutes les commandes :",
         "localShipping": "Livraison locale : 20 MAD",
         "outsideShipping": "Livraison hors ville : 35 MAD"
       },
@@ -488,7 +488,7 @@
     },
     "trust": {
       "freeShipping": "Livraison Gratuite",
-      "freeShippingDesc": "Pour les commandes +200 MAD",
+      "freeShippingDesc": "Sur toutes les commandes",
       "guarantee": "Garantie Qualité",
       "days": "jours",
       "securePayment": "Paiement Sécurisé",
@@ -600,7 +600,7 @@
       }
     },
     "announcementBar": {
-      "freeShipping": "Livraison Gratuite pour Commandes +200 MAD",
+      "freeShipping": "Livraison Gratuite sur Toutes les Commandes",
       "securePayment": "Paiement 100% Sécurisé et Garanti",
       "fastDelivery": "Livraison Rapide en 24-48 Heures",
       "support": "Support Client Disponible 24/7",

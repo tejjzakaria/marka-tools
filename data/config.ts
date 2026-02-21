@@ -29,7 +29,7 @@ export const siteConfig = {
     whatsapp: "0636751797",
   },
   shipping: {
-    freeShippingThreshold: 200, // MAD
+    freeShippingThreshold: 0, // MAD - free on all orders
     estimatedDeliveryDays: {
       casablanca: "1-2",
       otherCities: "2-5",

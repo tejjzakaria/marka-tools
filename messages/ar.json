@@ -11,7 +11,7 @@
     "home": "الرئيسية"
   },
   "header": {
-    "freeShippingBanner": "توصيل مجاني للطلبات فوق 200 درهم",
+    "freeShippingBanner": "توصيل مجاني على جميع الطلبات",
     "welcome": "مرحباً بكم في Marka Tools",
     "searchPlaceholder": "ابحث عن المنتجات...",
     "cart": "السلة"
@@ -35,7 +35,7 @@
     },
     "features": {
       "freeShipping": "توصيل مجاني",
-      "freeShippingDesc": "للطلبات فوق 200 درهم",
+      "freeShippingDesc": "على جميع الطلبات",
       "securePayment": "دفع آمن",
       "securePaymentDesc": "طرق دفع متعددة",
       "support": "دعم 24/7",
@@ -165,7 +165,7 @@
     },
     "freeShipping": {
       "title": "توصيل مجاني",
-      "description": "على جميع الطلبات فوق 200 درهم"
+      "description": "على جميع الطلبات"
     }
   },
   "testimonials": {
@@ -397,7 +397,7 @@
         },
         "delivery": {
           "question": "هل تقومون بالتوصيل لجميع مدن المغرب؟",
-          "answer": "نعم! نقوم بالتوصيل لجميع المدن والمناطق في جميع أنحاء المغرب. الشحن مجاني للطلبات التي تزيد عن 200 درهم."
+          "answer": "نعم! نقوم بالتوصيل لجميع المدن والمناطق في جميع أنحاء المغرب. التوصيل مجاني دائماً."
         },
         "cod": {
           "question": "هل الدفع عند الاستلام متاح؟",
@@ -462,9 +462,9 @@
       },
       "shippingCost": {
         "title": "تكلفة الشحن",
-        "freeShipping": "شحناً مجانياً للطلبات التي تزيد عن 200 درهم",
+        "freeShipping": "شحن مجاني على جميع الطلبات",
         "intro": "نقدم",
-        "underMinTitle": "بالنسبة للطلبات الأقل من 200 درهم:",
+        "underMinTitle": "التوصيل مجاني على جميع الطلبات:",
         "localShipping": "الشحن داخل المدينة: 20 درهم",
         "outsideShipping": "الشحن خارج المدينة: 35 درهم"
       },
@@ -488,7 +488,7 @@
     },
     "trust": {
       "freeShipping": "شحن مجاني",
-      "freeShippingDesc": "للطلبات فوق 200 درهم",
+      "freeShippingDesc": "على جميع الطلبات",
       "guarantee": "ضمان الجودة",
       "days": "يوم",
       "securePayment": "دفع آمن",
@@ -600,7 +600,7 @@
       }
     },
     "announcementBar": {
-      "freeShipping": "شحن مجاني للطلبات فوق 200 درهم",
+      "freeShipping": "شحن مجاني على جميع الطلبات",
       "securePayment": "دفع آمن ومضمون 100%",
       "fastDelivery": "توصيل سريع خلال 24-48 ساعة",
       "support": "خدمة عملاء متاحة 24/7",
