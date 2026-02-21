@@ -5,7 +5,7 @@
 
 export const siteConfig = {
   name: "Marka Tools",
-  domain: "amanaexpress.ma",
+  domain: "markatools.shop",
   defaultLocale: "ar" as const,
   locales: ["ar", "fr", "en"] as const,
   currency: {
@@ -15,7 +15,7 @@ export const siteConfig = {
   },
   contact: {
     phone: "0636751797",
-    email: "contact@markatools.ma",
+    email: "contact@markatools.shop",
     address: {
       street: "",
       city: "Agadir",
@@ -23,9 +23,9 @@ export const siteConfig = {
     },
   },
   social: {
-    facebook: "https://facebook.com/amanaexpress",
-    instagram: "https://instagram.com/amanaexpress",
-    twitter: "https://twitter.com/amanaexpress",
+    facebook: "https://facebook.com/markatools.shop",
+    instagram: "https://instagram.com/markatools.shop",
+    twitter: "https://twitter.com/markatools.shop",
     whatsapp: "0636751797",
   },
   shipping: {
