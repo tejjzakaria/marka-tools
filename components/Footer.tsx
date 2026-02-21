@@ -67,7 +67,7 @@ export default function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
           {/* Brand column */}
           <div className="lg:col-span-2">
-            <Image src="/marka-tools%20logo.jpg" alt="Marka Tools Logo" width={280} height={140} className="h-auto w-[220px] lg:w-[280px]" />
+            <Image src="/marka-tools%20logo.png" alt="Marka Tools Logo" width={280} height={140} className="h-auto w-[220px] lg:w-[280px]" />
 
             <p className="mb-6 max-w-sm text-neutral-400 mt-6">
               {t("footer.description")}
