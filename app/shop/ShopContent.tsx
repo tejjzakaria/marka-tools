@@ -37,13 +37,17 @@ export default function ShopContent() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Get search query from URL on mount
+  // Get search query and category from URL on mount
   useEffect(() => {
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
       const search = params.get("search");
       if (search) {
         setSearchQuery(search);
+      }
+      const category = params.get("category");
+      if (category) {
+        setSelectedCategories([category]);
       }
     }
   }, []);

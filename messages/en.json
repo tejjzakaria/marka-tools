@@ -451,22 +451,11 @@
     "shipping": {
       "deliveryTime": {
         "title": "Delivery Time",
-        "intro": "We offer fast delivery to all cities:",
-        "casablanca": "Casablanca:",
-        "casablancaTime": "1-2 business days",
-        "majorCities": "Other major cities:",
-        "majorCitiesTime": "2-3 business days",
+        "intro": "Free shipping on all orders",
+        "casaAgadir": "Casa - Agadir:",
+        "casaAgadirTime": "12H",
         "otherCities": "Other cities:",
-        "otherCitiesTime": "3-5 business days",
-        "shippingTime": "Orders are shipped within 24 hours of order confirmation."
-      },
-      "shippingCost": {
-        "title": "Shipping Cost",
-        "freeShipping": "free shipping on all orders",
-        "intro": "We offer",
-        "underMinTitle": "Shipping is free for all orders:",
-        "localShipping": "Local shipping: 20 MAD",
-        "outsideShipping": "Out-of-city shipping: 35 MAD"
+        "otherCitiesTime": "24H"
       },
       "trackingOrder": {
         "title": "Order Tracking",

@@ -451,22 +451,11 @@
     "shipping": {
       "deliveryTime": {
         "title": "مدة التوصيل",
-        "intro": "نوفر خدمة توصيل سريعة لجميع المدن:",
-        "casablanca": "الدار البيضاء:",
-        "casablancaTime": "1-2 أيام عمل",
-        "majorCities": "المدن الكبرى الأخرى:",
-        "majorCitiesTime": "2-3 أيام عمل",
-        "otherCities": "باقي المدن:",
-        "otherCitiesTime": "3-5 أيام عمل",
-        "shippingTime": "يتم شحن الطلبات خلال 24 ساعة من تأكيد الطلب."
-      },
-      "shippingCost": {
-        "title": "تكلفة الشحن",
-        "freeShipping": "شحن مجاني على جميع الطلبات",
-        "intro": "نقدم",
-        "underMinTitle": "التوصيل مجاني على جميع الطلبات:",
-        "localShipping": "الشحن داخل المدينة: 20 درهم",
-        "outsideShipping": "الشحن خارج المدينة: 35 درهم"
+        "intro": "شحن مجاني على جميع الطلبات",
+        "casaAgadir": "كازا - أكادير:",
+        "casaAgadirTime": "12 ساعة",
+        "otherCities": "المدن الأخرى:",
+        "otherCitiesTime": "24 ساعة"
       },
       "trackingOrder": {
         "title": "تتبع الطلب",

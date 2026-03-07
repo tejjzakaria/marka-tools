@@ -7,6 +7,7 @@
 import { useTranslations } from "next-intl";
 import { IconArrowLeft, IconArrowRight, IconSparkles } from "@tabler/icons-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useRTL } from "@/hooks/useRTL";
 import { getFeaturedCategories, heroStats, heroFeatures } from "@/data";
 
@@ -138,15 +139,16 @@ export default function Hero() {
             <h2 className="animate-fade-in-up text-xl font-bold text-neutral-900 sm:text-2xl">
               {t("common.exploreCategories")}
             </h2>
-            <button className="animate-fade-in-up text-sm font-medium text-primary transition-colors hover:text-primary-dark">
+            <Link href="/categories" className="animate-fade-in-up text-sm font-medium text-primary transition-colors hover:text-primary-dark">
               {t("common.viewAll")}
-            </button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:justify-center sm:gap-4">
             {featuredCategories.map((category, index) => (
-              <div
+              <Link
                 key={category.id}
+                href={`/shop?category=${category.id}`}
                 className="animate-fade-in-up group cursor-pointer overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:w-48 sm:flex-none lg:flex-1"
                 style={{ animationDelay: `${800 + index * 100}ms` }}
               >
@@ -172,7 +174,7 @@ export default function Hero() {
                     {t(category.translationKey)}
                   </h3>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -1171,38 +1171,11 @@ export default function ProductPageContent({ product }: ProductPageContentProps)
                     <div class="space-y-6">
                       <div>
                         <h3 class="font-semibold text-neutral-900 mb-2">${t("productPage.shipping.deliveryTime.title")}</h3>
-                        <p>${t("productPage.shipping.deliveryTime.intro")}</p>
+                        <p class="font-semibold">${t("productPage.shipping.deliveryTime.intro")}</p>
                         <ul>
-                          <li><strong>${t("productPage.shipping.deliveryTime.casablanca")}</strong> ${t("productPage.shipping.deliveryTime.casablancaTime")}</li>
-                          <li><strong>${t("productPage.shipping.deliveryTime.majorCities")}</strong> ${t("productPage.shipping.deliveryTime.majorCitiesTime")}</li>
+                          <li><strong>${t("productPage.shipping.deliveryTime.casaAgadir")}</strong> ${t("productPage.shipping.deliveryTime.casaAgadirTime")}</li>
                           <li><strong>${t("productPage.shipping.deliveryTime.otherCities")}</strong> ${t("productPage.shipping.deliveryTime.otherCitiesTime")}</li>
                         </ul>
-                        <p>${t("productPage.shipping.deliveryTime.shippingTime")}</p>
-                      </div>
-                      <div>
-                        <h3 class="font-semibold text-neutral-900 mb-2">${t("productPage.shipping.shippingCost.title")}</h3>
-                        <p>${t("productPage.shipping.shippingCost.intro")} <strong>${t("productPage.shipping.shippingCost.freeShipping")}</strong>.</p>
-                        <p>${t("productPage.shipping.shippingCost.underMinTitle")}</p>
-                        <ul>
-                          <li>${t("productPage.shipping.shippingCost.localShipping")}</li>
-                          <li>${t("productPage.shipping.shippingCost.outsideShipping")}</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h3 class="font-semibold text-neutral-900 mb-2">${t("productPage.shipping.trackingOrder.title")}</h3>
-                        <p>${t("productPage.shipping.trackingOrder.intro")} <strong>${t("productPage.shipping.trackingOrder.trackingNumber")}</strong>.</p>
-                        <p>${t("productPage.shipping.trackingOrder.usage")}</p>
-                      </div>
-                      <div>
-                        <h3 class="font-semibold text-neutral-900 mb-2">${t("productPage.shipping.returnPolicy.title")}</h3>
-                        <p>${t("productPage.shipping.returnPolicy.intro")} <strong>${t("productPage.shipping.returnPolicy.guarantee")}</strong> ${t("productPage.shipping.returnPolicy.fromReceipt")}</p>
-                        <p>${t("productPage.shipping.returnPolicy.conditionsTitle")}</p>
-                        <ul>
-                          <li>${t("productPage.shipping.returnPolicy.condition1")}</li>
-                          <li>${t("productPage.shipping.returnPolicy.condition2")}</li>
-                          <li>${t("productPage.shipping.returnPolicy.condition3")}</li>
-                        </ul>
-                        <p>${t("productPage.shipping.returnPolicy.contact")}</p>
                       </div>
                     </div>
                   `}
