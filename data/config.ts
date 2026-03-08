@@ -14,7 +14,7 @@ export const siteConfig = {
     locale: "fr-MA",
   },
   contact: {
-    phone: "0636751797",
+    phone: "0725322491",
     email: "contact@markatools.shop",
     address: {
       street: "",
