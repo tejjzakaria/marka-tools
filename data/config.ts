@@ -26,7 +26,7 @@ export const siteConfig = {
     facebook: "https://facebook.com/markatools.shop",
     instagram: "https://instagram.com/markatools.shop",
     twitter: "https://twitter.com/markatools.shop",
-    whatsapp: "0636751797",
+    whatsapp: "0725322491",
   },
   shipping: {
     freeShippingThreshold: 0, // MAD - free on all orders
