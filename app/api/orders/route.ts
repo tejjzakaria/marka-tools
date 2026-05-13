@@ -8,6 +8,8 @@ import connectToDatabase from '@/lib/mongodb';
 import Order, { generateOrderNumber } from '@/lib/models/Order';
 import { appendToProductSheets } from '@/lib/googleSheets';
 
+export const maxDuration = 30; // seconds — needed for Google Sheets API call
+
 interface OrderItemInput {
   productId: string;
   productSlug: string;

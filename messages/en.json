@@ -695,6 +695,7 @@
       "slugPlaceholder": "product-url-slug",
       "sku": "SKU",
       "skuPlaceholder": "SKU-001",
+      "generateSku": "Generate SKU",
       "category": "Category",
       "selectCategory": "Select category",
       "descriptions": "Descriptions",

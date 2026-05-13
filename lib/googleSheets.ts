@@ -11,6 +11,7 @@ interface OrderItem {
   productName: string;
   price: number;
   quantity: number;
+  sku?: string;
   selectedOffer?: {
     text: string;
     price: number;
@@ -99,22 +100,24 @@ export async function appendToGoogleSheet(
       const productUrl = `${baseUrl}/product/${item.productSlug}`;
 
       return [
-        orderData.orderNumber,        // Order ID
-        orderDate,                     // Order date
-        orderData.customerName,        // First name (full name)
-        orderData.customerPhone,       // Phone
-        orderData.customerAddress,     // City
-        variantPrice,                  // Variant price
-        productVariant,                // Product variant
-        item.productName,              // Product name
-        productUrl,                    // Product URL
+        orderData.orderNumber,        // A: Order ID
+        orderDate,                     // B: Order date
+        orderData.customerName,        // C: Customer name
+        orderData.customerPhone,       // D: Phone
+        orderData.customerAddress,     // E: City
+        variantPrice,                  // F: Variant price
+        productVariant,                // G: Product variant
+        item.productName,              // H: Product name
+        productUrl,                    // I: Product URL
+        '',                            // J: (empty — reserved)
+        item.sku || '',                // K: SKU
       ];
     });
 
     // Append all rows to sheet
     console.log('[Google Sheets] Appending to spreadsheet...', {
       spreadsheetId: targetSpreadsheetId,
-      range: 'Youcan-Orders!A:I',
+      range: 'Youcan-Orders!A:K',
       rowCount: rows.length,
       orderNumber: orderData.orderNumber
     });
@@ -122,7 +125,7 @@ export async function appendToGoogleSheet(
     // Add timeout wrapper to detect hanging requests
     const appendPromise = sheets.spreadsheets.values.append({
       spreadsheetId: targetSpreadsheetId,
-      range: 'Youcan-Orders!A:I', // Columns A-I (9 columns total)
+      range: 'Youcan-Orders!A:K', // Columns A-J (10 columns total)
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: rows,
@@ -130,7 +133,7 @@ export async function appendToGoogleSheet(
     });
 
     const timeoutPromise = new Promise((_, reject) => {
-      setTimeout(() => reject(new Error('Google Sheets API timeout after 10 seconds')), 10000);
+      setTimeout(() => reject(new Error('Google Sheets API timeout after 20 seconds')), 20000);
     });
 
     const appendResult = await Promise.race([appendPromise, timeoutPromise]) as any;
@@ -184,13 +187,26 @@ export async function appendToProductSheets(
     // Fetch all products in the order
     const products = await Product.find(
       { _id: { $in: productIds } },
-      { googleSheetId: 1 }
+      { googleSheetId: 1, sku: 1 }
     ).lean();
 
     console.log('[Google Sheets] Fetched products:', {
       fetchedCount: products.length,
-      products: products.map((p: any) => ({ id: p._id, sheetId: p.googleSheetId || 'none' }))
+      products: products.map((p: any) => ({ id: p._id, sheetId: p.googleSheetId || 'none', sku: p.sku || 'none' }))
     });
+
+    // Build productId → sku map and enrich order items
+    const productSkuMap = new Map<string, string>();
+    products.forEach((p: any) => {
+      if (p.sku) productSkuMap.set(p._id.toString(), p.sku);
+    });
+    const enrichedOrderData = {
+      ...orderData,
+      items: orderData.items.map((item, i) => ({
+        ...item,
+        sku: productSkuMap.get(productIds[i]) || '',
+      })),
+    };
 
     // Collect unique spreadsheet IDs
     const spreadsheetIds = new Set<string>();
@@ -209,7 +225,7 @@ export async function appendToProductSheets(
     // If no custom sheets, use default
     if (spreadsheetIds.size === 0) {
       console.log('[Google Sheets] No custom sheets found, using default sheet');
-      const defaultResult = await appendToGoogleSheet(orderData);
+      const defaultResult = await appendToGoogleSheet(enrichedOrderData);
       return {
         success: defaultResult,
         results: [{
@@ -224,7 +240,7 @@ export async function appendToProductSheets(
     const results = await Promise.allSettled(
       Array.from(spreadsheetIds).map(async (sheetId) => {
         console.log('[Google Sheets] Attempting to send to sheet:', sheetId);
-        const success = await appendToGoogleSheet(orderData, sheetId);
+        const success = await appendToGoogleSheet(enrichedOrderData, sheetId);
         return {
           spreadsheetId: sheetId,
           success,

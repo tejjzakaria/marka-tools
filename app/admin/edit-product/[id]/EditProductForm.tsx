@@ -32,6 +32,7 @@ import {
   IconEdit,
   IconGift,
   IconFileSpreadsheet,
+  IconRefresh,
 } from '@tabler/icons-react';
 import { categories } from '@/data/categories';
 import IconSelector from '@/components/admin/IconSelector';
@@ -237,6 +238,14 @@ export default function EditProductForm({ productId }: EditProductFormProps) {
       .replace(/\s+/g, '-')
       .replace(/-+/g, '-')
       .trim();
+  };
+
+  const generateSku = () => {
+    const prefix = formData.name
+      ? formData.name.replace(/[^a-zA-Z0-9]/g, '').slice(0, 3).toUpperCase()
+      : 'PRD';
+    const suffix = Math.random().toString(36).substring(2, 8).toUpperCase();
+    setFormData((prev) => ({ ...prev, sku: `${prefix}-${suffix}` }));
   };
 
   const handleInputChange = (
@@ -680,14 +689,24 @@ export default function EditProductForm({ productId }: EditProductFormProps) {
                   <label className="block text-sm font-medium text-neutral-700 mb-1">
                     {t('sku')}
                   </label>
-                  <input
-                    type="text"
-                    name="sku"
-                    value={formData.sku}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2.5 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
-                    placeholder={t('skuPlaceholder')}
-                  />
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      name="sku"
+                      value={formData.sku}
+                      onChange={handleInputChange}
+                      className="flex-1 px-4 py-2.5 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                      placeholder={t('skuPlaceholder')}
+                    />
+                    <button
+                      type="button"
+                      onClick={generateSku}
+                      title={t('generateSku')}
+                      className="px-3 py-2.5 border border-neutral-200 rounded-lg text-neutral-500 hover:text-primary hover:border-primary transition-colors"
+                    >
+                      <IconRefresh size={16} />
+                    </button>
+                  </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-neutral-700 mb-1">

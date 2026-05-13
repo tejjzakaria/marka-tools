@@ -712,6 +712,7 @@
       "slugPlaceholder": "رابط-المنتج",
       "sku": "رمز المنتج",
       "skuPlaceholder": "SKU-001",
+      "generateSku": "توليد الرمز",
       "category": "الفئة",
       "selectCategory": "اختر الفئة",
       "descriptions": "الأوصاف",
