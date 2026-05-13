@@ -101,23 +101,22 @@ export async function appendToGoogleSheet(
 
       return [
         orderData.orderNumber,        // A: Order ID
-        orderDate,                     // B: Order date
-        orderData.customerName,        // C: Customer name
-        orderData.customerPhone,       // D: Phone
-        orderData.customerAddress,     // E: City
-        variantPrice,                  // F: Variant price
-        productVariant,                // G: Product variant
-        item.productName,              // H: Product name
-        productUrl,                    // I: Product URL
-        '',                            // J: (empty — reserved)
-        item.sku || '',                // K: SKU
+        item.sku || '',               // B: SKU
+        orderDate,                    // C: Order date
+        orderData.customerName,       // D: Customer name
+        orderData.customerPhone,      // E: Phone
+        orderData.customerAddress,    // F: City
+        variantPrice,                 // G: Variant price
+        productVariant,               // H: Product variant
+        item.productName,             // I: Product name
+        productUrl,                   // J: Product URL
       ];
     });
 
     // Append all rows to sheet
     console.log('[Google Sheets] Appending to spreadsheet...', {
       spreadsheetId: targetSpreadsheetId,
-      range: 'Youcan-Orders!A:K',
+      range: 'Youcan-Orders!A:J',
       rowCount: rows.length,
       orderNumber: orderData.orderNumber
     });
@@ -125,7 +124,7 @@ export async function appendToGoogleSheet(
     // Add timeout wrapper to detect hanging requests
     const appendPromise = sheets.spreadsheets.values.append({
       spreadsheetId: targetSpreadsheetId,
-      range: 'Youcan-Orders!A:K', // Columns A-J (10 columns total)
+      range: 'Youcan-Orders!A:J', // Columns A-J (10 columns total)
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: rows,
