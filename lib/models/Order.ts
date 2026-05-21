@@ -21,6 +21,13 @@ export interface IOrderItem {
   };
 }
 
+export interface IOrderLocation {
+  city?: string;
+  region?: string;
+  country?: string;
+  countryCode?: string;
+}
+
 export interface IOrder extends Document {
   orderNumber: string;
   customerName: string;
@@ -33,6 +40,7 @@ export interface IOrder extends Document {
   status: 'pending' | 'confirmed' | 'processing' | 'shipped' | 'delivered' | 'cancelled';
   paymentMethod: string;
   notes?: string;
+  location?: IOrderLocation;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -117,6 +125,15 @@ const OrderSchema = new Schema<IOrder>(
     notes: {
       type: String,
       trim: true,
+    },
+    location: {
+      type: {
+        city: { type: String },
+        region: { type: String },
+        country: { type: String },
+        countryCode: { type: String },
+      },
+      required: false,
     },
   },
   {

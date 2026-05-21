@@ -435,7 +435,8 @@
       "continueShopping": "متابعة التسوق"
     },
     "form": {
-      "error": "حدث خطأ. يرجى التحقق من البيانات والمحاولة مرة أخرى."
+      "error": "حدث خطأ. يرجى التحقق من البيانات والمحاولة مرة أخرى.",
+      "rateLimitError": "لقد تجاوزت الحد المسموح به لطلب \"{productName}\". يمكنك إعادة المحاولة بعد 12 ساعة."
     }
   },
   "productPage": {
@@ -609,7 +610,22 @@
       "whatsappSubscribers": "مشتركو الواتساب",
       "contacts": "الرسائل",
       "settings": "الإعدادات",
+      "whitelist": "القائمة البيضاء",
       "backToStore": "العودة للمتجر"
+    },
+    "whitelist": {
+      "title": "القائمة البيضاء",
+      "subtitle": "عناوين IP المعفاة من حد الطلبات",
+      "addIp": "إضافة عنوان IP",
+      "ipAddress": "عنوان IP",
+      "ipRequired": "عنوان IP مطلوب",
+      "note": "ملاحظة",
+      "notePlaceholder": "سبب الإضافة (اختياري)",
+      "addButton": "إضافة",
+      "adding": "جاري الإضافة...",
+      "deleteButton": "حذف",
+      "noEntries": "لا توجد عناوين IP في القائمة البيضاء",
+      "addedAt": "تاريخ الإضافة"
     },
     "contacts": {
       "title": "رسائل الاتصال",

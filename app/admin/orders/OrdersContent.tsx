@@ -17,6 +17,7 @@ import {
   IconMapPin,
   IconChevronDown,
   IconRefresh,
+  IconWorld,
 } from "@tabler/icons-react";
 import AdminNav from "@/components/admin/AdminNav";
 import { formatPriceSimple } from "@/data/config";
@@ -37,6 +38,13 @@ interface OrderItem {
   };
 }
 
+interface OrderLocation {
+  city?: string;
+  region?: string;
+  country?: string;
+  countryCode?: string;
+}
+
 interface Order {
   _id: string;
   orderNumber: string;
@@ -49,6 +57,7 @@ interface Order {
   total: number;
   status: "pending" | "confirmed" | "processing" | "shipped" | "delivered" | "cancelled";
   paymentMethod: string;
+  location?: OrderLocation;
   createdAt: string;
   updatedAt: string;
 }
@@ -353,6 +362,16 @@ export default function OrdersContent() {
                         <IconMapPin size={16} className="mt-0.5 shrink-0" />
                         <span>{order.customerAddress}</span>
                       </div>
+                      {order.location?.city && (
+                        <div className="flex items-center gap-2 text-neutral-500">
+                          <IconWorld size={16} className="shrink-0" />
+                          <span>
+                            {[order.location.city, order.location.region, order.location.countryCode]
+                              .filter(Boolean)
+                              .join(', ')}
+                          </span>
+                        </div>
+                      )}
                     </div>
                   </div>
 

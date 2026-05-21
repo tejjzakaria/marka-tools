@@ -17,6 +17,7 @@ import {
   IconBrandWhatsapp,
   IconMail,
   IconSettings,
+  IconShieldCheck,
 } from "@tabler/icons-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useAdminAuth } from "@/context/AdminAuthContext";
@@ -57,6 +58,11 @@ export default function AdminNav() {
       href: "/admin/settings",
       label: t("nav.settings"),
       icon: IconSettings,
+    },
+    {
+      href: "/admin/whitelist",
+      label: t("nav.whitelist"),
+      icon: IconShieldCheck,
     },
   ];
 

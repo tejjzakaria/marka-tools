@@ -115,6 +115,10 @@ export default function CheckoutContent() {
         });
 
         clearCart();
+      } else if (data.message === 'order_limit_reached') {
+        setSubmitError(
+          t("checkout.form.rateLimitError", { productName: data.productName })
+        );
       } else {
         setSubmitError(data.message || t("checkout.form.error"));
       }

@@ -435,7 +435,8 @@
       "continueShopping": "Continue Shopping"
     },
     "form": {
-      "error": "An error occurred. Please check your information and try again."
+      "error": "An error occurred. Please check your information and try again.",
+      "rateLimitError": "You have reached the order limit for \"{productName}\". Please try again after 12 hours."
     }
   },
   "productPage": {
@@ -609,7 +610,22 @@
       "whatsappSubscribers": "WhatsApp Subscribers",
       "backToStore": "Back to Store",
       "contacts": "Messages",
-      "settings": "Settings"
+      "settings": "Settings",
+      "whitelist": "IP Whitelist"
+    },
+    "whitelist": {
+      "title": "IP Whitelist",
+      "subtitle": "IPs exempt from the order rate limit",
+      "addIp": "Add IP Address",
+      "ipAddress": "IP Address",
+      "ipRequired": "IP address is required",
+      "note": "Note",
+      "notePlaceholder": "Reason for adding (optional)",
+      "addButton": "Add",
+      "adding": "Adding...",
+      "deleteButton": "Remove",
+      "noEntries": "No IP addresses in the whitelist",
+      "addedAt": "Added At"
     },
     "orders": {
       "title": "Orders",
