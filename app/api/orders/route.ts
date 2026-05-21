@@ -186,6 +186,7 @@ export async function POST(request: NextRequest) {
       total,
       status: 'pending',
       paymentMethod: 'cod',
+      customerIp: clientIp,
       ...(location && { location }),
     });
 

@@ -41,6 +41,7 @@ export interface IOrder extends Document {
   paymentMethod: string;
   notes?: string;
   location?: IOrderLocation;
+  customerIp?: string;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -134,6 +135,9 @@ const OrderSchema = new Schema<IOrder>(
         countryCode: { type: String },
       },
       required: false,
+    },
+    customerIp: {
+      type: String,
     },
   },
   {

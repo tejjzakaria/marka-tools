@@ -18,6 +18,7 @@ import {
   IconChevronDown,
   IconRefresh,
   IconWorld,
+  IconDeviceDesktop,
 } from "@tabler/icons-react";
 import AdminNav from "@/components/admin/AdminNav";
 import { formatPriceSimple } from "@/data/config";
@@ -58,6 +59,7 @@ interface Order {
   status: "pending" | "confirmed" | "processing" | "shipped" | "delivered" | "cancelled";
   paymentMethod: string;
   location?: OrderLocation;
+  customerIp?: string;
   createdAt: string;
   updatedAt: string;
 }
@@ -370,6 +372,12 @@ export default function OrdersContent() {
                               .filter(Boolean)
                               .join(', ')}
                           </span>
+                        </div>
+                      )}
+                      {order.customerIp && (
+                        <div className="flex items-center gap-2 text-neutral-400 font-mono text-xs">
+                          <IconDeviceDesktop size={14} className="shrink-0" />
+                          <span>{order.customerIp}</span>
                         </div>
                       )}
                     </div>
