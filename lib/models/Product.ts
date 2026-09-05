@@ -26,6 +26,22 @@ export interface IProductReview {
   images?: string[];
 }
 
+export interface IProductAddonOption {
+  label: string;
+  price?: number;
+}
+
+export interface IProductAddon {
+  id: string;
+  title: string;
+  icon?: string;
+  price: number;
+  options: IProductAddonOption[];
+  multiple: boolean;
+  maxPerOption: number;
+  required: boolean;
+}
+
 export interface IProduct extends Document {
   slug: string;
   name: string;
@@ -47,6 +63,7 @@ export interface IProduct extends Document {
   features: IProductFeature[];
   highlights: string[];
   offers: IProductOffer[];
+  addons: IProductAddon[];
   guaranteeDays: number;
   reviews: IProductReview[];
   googleSheetId?: string;
@@ -68,6 +85,28 @@ const ProductOfferSchema = new Schema<IProductOffer>(
     icon: { type: String, required: true },
     text: { type: String, required: true },
     price: { type: Number, required: true, min: 0 },
+  },
+  { _id: false }
+);
+
+const ProductAddonOptionSchema = new Schema<IProductAddonOption>(
+  {
+    label: { type: String, required: true, trim: true },
+    price: { type: Number, min: 0 },
+  },
+  { _id: false }
+);
+
+const ProductAddonSchema = new Schema<IProductAddon>(
+  {
+    id: { type: String, required: true, trim: true },
+    title: { type: String, required: true, trim: true },
+    icon: { type: String, trim: true },
+    price: { type: Number, required: true, min: 0 },
+    options: { type: [ProductAddonOptionSchema], default: [] },
+    multiple: { type: Boolean, default: true },
+    maxPerOption: { type: Number, default: 10, min: 1 },
+    required: { type: Boolean, default: false },
   },
   { _id: false }
 );
@@ -177,6 +216,10 @@ const ProductSchema = new Schema<IProduct>(
     },
     offers: {
       type: [ProductOfferSchema],
+      default: [],
+    },
+    addons: {
+      type: [ProductAddonSchema],
       default: [],
     },
     guaranteeDays: {

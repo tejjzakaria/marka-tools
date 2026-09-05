@@ -523,7 +523,10 @@
       "selectOffer": "Select a special offer",
       "regularPrice": "Regular Price",
       "orderError": "Failed to place order",
-      "orderErrorRetry": "Failed to place order. Please try again."
+      "orderErrorRetry": "Failed to place order. Please try again.",
+      "addonsTitle": "Optional add-ons",
+      "addons": "Add-ons",
+      "addonRequiredError": "Please choose \"{name}\""
     },
     "relatedProducts": {
       "subtitle": "Discover more amazing products"
@@ -813,7 +816,22 @@
           "charts": "Charts",
           "status": "Status"
         }
-      }
+      },
+      "addons": "Add-ons",
+      "addonsHelp": "Extras sold alongside the product (e.g. ink in colors and quantities). The customer picks a color and quantity, and the price is added to the order.",
+      "addon": "Add-on",
+      "addonIcon": "Choose an icon",
+      "addonTitle": "Add-on name",
+      "addonPrice": "Base price (MAD)",
+      "addonId": "ID (optional)",
+      "addonMaxPerOption": "Max quantity",
+      "addonAllowMultiple": "Allow multiple options",
+      "addonRequired": "Required",
+      "addonOptions": "Options (e.g. colors)",
+      "addonOptionLabel": "Option name",
+      "addonOptionPrice": "Custom price (optional)",
+      "addAddonOption": "Add option",
+      "addAddon": "Add add-on"
     },
     "richTextEditor": {
       "toolbar": {

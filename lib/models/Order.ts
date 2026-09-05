@@ -5,6 +5,15 @@
 
 import mongoose, { Schema, Document, Model } from 'mongoose';
 
+export interface IOrderItemAddon {
+  addonId: string;
+  title: string;
+  option?: string;
+  unitPrice: number;
+  quantity: number;
+  subtotal: number;
+}
+
 export interface IOrderItem {
   productId: string;
   productSlug: string;
@@ -19,6 +28,7 @@ export interface IOrderItem {
     text: string;
     price: number;
   };
+  addons?: IOrderItemAddon[];
 }
 
 export interface IOrderLocation {
@@ -46,6 +56,18 @@ export interface IOrder extends Document {
   updatedAt: Date;
 }
 
+const OrderItemAddonSchema = new Schema<IOrderItemAddon>(
+  {
+    addonId: { type: String, required: true },
+    title: { type: String, required: true },
+    option: { type: String },
+    unitPrice: { type: Number, required: true, min: 0 },
+    quantity: { type: Number, required: true, min: 1 },
+    subtotal: { type: Number, required: true, min: 0 },
+  },
+  { _id: false }
+);
+
 const OrderItemSchema = new Schema<IOrderItem>(
   {
     productId: { type: String, required: true },
@@ -63,6 +85,10 @@ const OrderItemSchema = new Schema<IOrderItem>(
         price: { type: Number, required: true },
       },
       required: false,
+    },
+    addons: {
+      type: [OrderItemAddonSchema],
+      default: undefined,
     },
   },
   { _id: false }

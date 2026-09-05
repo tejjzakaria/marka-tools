@@ -15,6 +15,22 @@ export interface DBProductOffer {
   price: number;
 }
 
+export interface DBProductAddonOption {
+  label: string;
+  price?: number;
+}
+
+export interface DBProductAddon {
+  id: string;
+  title: string;
+  icon?: string;
+  price: number;
+  options: DBProductAddonOption[];
+  multiple: boolean;
+  maxPerOption: number;
+  required: boolean;
+}
+
 export interface DBProductReview {
   reviewerName: string;
   reviewText: string;
@@ -46,6 +62,7 @@ export interface DBProduct {
   features: DBProductFeature[];
   highlights: string[];
   offers?: DBProductOffer[];
+  addons?: DBProductAddon[];
   guaranteeDays: number;
   reviews?: DBProductReview[];
   googleSheetId?: string;

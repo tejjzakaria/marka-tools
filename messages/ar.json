@@ -523,7 +523,10 @@
       "selectOffer": "اختر عرضاً خاصاً",
       "regularPrice": "السعر العادي",
       "orderError": "فشل تقديم الطلب",
-      "orderErrorRetry": "فشل تقديم الطلب. يرجى المحاولة مرة أخرى."
+      "orderErrorRetry": "فشل تقديم الطلب. يرجى المحاولة مرة أخرى.",
+      "addonsTitle": "إضافات اختيارية",
+      "addons": "الإضافات",
+      "addonRequiredError": "الرجاء اختيار \"{name}\""
     },
     "relatedProducts": {
       "subtitle": "اكتشف المزيد من المنتجات الرائعة"
@@ -830,7 +833,22 @@
           "charts": "رسوم بيانية",
           "status": "حالة"
         }
-      }
+      },
+      "addons": "الإضافات",
+      "addonsHelp": "إضافات تُباع مع المنتج (مثل الحبر بألوان وكميات). يختار الزبون اللون والكمية ويُضاف السعر إلى الطلب.",
+      "addon": "الإضافة",
+      "addonIcon": "اختر أيقونة",
+      "addonTitle": "اسم الإضافة",
+      "addonPrice": "السعر الأساسي (درهم)",
+      "addonId": "المعرّف (اختياري)",
+      "addonMaxPerOption": "الحد الأقصى للكمية",
+      "addonAllowMultiple": "السماح بعدة خيارات",
+      "addonRequired": "إلزامية",
+      "addonOptions": "الخيارات (مثل الألوان)",
+      "addonOptionLabel": "اسم الخيار",
+      "addonOptionPrice": "سعر خاص (اختياري)",
+      "addAddonOption": "إضافة خيار",
+      "addAddon": "إضافة إضافة"
     },
     "richTextEditor": {
       "toolbar": {

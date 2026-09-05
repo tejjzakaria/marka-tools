@@ -36,6 +36,11 @@ import {
 } from '@tabler/icons-react';
 import { categories } from '@/data/categories';
 import IconSelector from '@/components/admin/IconSelector';
+import AddonsEditor, {
+  AddonDraft,
+  hydrateAddons,
+  serializeAddons,
+} from '@/components/admin/AddonsEditor';
 import AdminNav from '@/components/admin/AdminNav';
 import { useAdminFetch } from '@/hooks/useAdminFetch';
 import { RichTextEditor } from '@/components/admin/RichTextEditor/RichTextEditor';
@@ -114,6 +119,7 @@ export default function EditProductForm({ productId }: EditProductFormProps) {
   const [highlights, setHighlights] = useState<string[]>(['']);
   const [features, setFeatures] = useState<ProductFeature[]>([]);
   const [offers, setOffers] = useState<ProductOffer[]>([]);
+  const [addons, setAddons] = useState<AddonDraft[]>([]);
   const [reviews, setReviews] = useState<ProductReview[]>([]);
   const [images, setImages] = useState<UploadedImage[]>([]);
   const [mainImageIndex, setMainImageIndex] = useState(0);
@@ -172,6 +178,11 @@ export default function EditProductForm({ productId }: EditProductFormProps) {
               price: offer.price?.toString() || '',
             }));
             setOffers(existingOffers);
+          }
+
+          // Populate add-ons
+          if (product.addons && product.addons.length > 0) {
+            setAddons(hydrateAddons(product.addons));
           }
 
           // Populate images
@@ -567,6 +578,7 @@ export default function EditProductForm({ productId }: EditProductFormProps) {
           text: o.text,
           price: parseFloat(o.price),
         })),
+      addons: serializeAddons(addons),
       reviews: reviewsWithUploadedImages.filter(
         (r) => r.reviewerName.trim() !== '' && r.reviewText.trim() !== ''
       ),
@@ -1221,6 +1233,9 @@ export default function EditProductForm({ productId }: EditProductFormProps) {
                 </button>
               </div>
             </section>
+
+            {/* Add-ons */}
+            <AddonsEditor value={addons} onChange={setAddons} />
 
             {/* Reviews */}
             <section>

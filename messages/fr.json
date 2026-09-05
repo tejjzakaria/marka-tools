@@ -522,7 +522,10 @@
       "selectOffer": "Sélectionnez une offre spéciale",
       "regularPrice": "Prix Régulier",
       "orderError": "Échec de la commande",
-      "orderErrorRetry": "Échec de la commande. Veuillez réessayer."
+      "orderErrorRetry": "Échec de la commande. Veuillez réessayer.",
+      "addonsTitle": "Options supplémentaires",
+      "addons": "Options",
+      "addonRequiredError": "Veuillez choisir « {name} »"
     },
     "relatedProducts": {
       "subtitle": "Découvrez plus de produits incroyables"
@@ -796,7 +799,22 @@
           "charts": "Graphiques",
           "status": "Statut"
         }
-      }
+      },
+      "addons": "Options supplémentaires",
+      "addonsHelp": "Extras vendus avec le produit (ex. encre en couleurs et quantités). Le client choisit une couleur et une quantité, et le prix s'ajoute à la commande.",
+      "addon": "Option",
+      "addonIcon": "Choisir une icône",
+      "addonTitle": "Nom de l'option",
+      "addonPrice": "Prix de base (MAD)",
+      "addonId": "Identifiant (optionnel)",
+      "addonMaxPerOption": "Quantité max",
+      "addonAllowMultiple": "Autoriser plusieurs choix",
+      "addonRequired": "Obligatoire",
+      "addonOptions": "Choix (ex. couleurs)",
+      "addonOptionLabel": "Nom du choix",
+      "addonOptionPrice": "Prix spécifique (optionnel)",
+      "addAddonOption": "Ajouter un choix",
+      "addAddon": "Ajouter une option"
     },
     "richTextEditor": {
       "toolbar": {

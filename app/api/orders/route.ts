@@ -5,9 +5,10 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import connectToDatabase from '@/lib/mongodb';
-import Order, { generateOrderNumber } from '@/lib/models/Order';
+import Order, { generateOrderNumber, IOrderItemAddon } from '@/lib/models/Order';
 import OrderAttempt from '@/lib/models/OrderAttempt';
 import WhitelistedIp from '@/lib/models/WhitelistedIp';
+import Product from '@/lib/models/Product';
 import { appendToProductSheets } from '@/lib/googleSheets';
 
 const ORDER_LIMIT_PER_PRODUCT = 2;
@@ -67,6 +68,12 @@ async function lookupIpLocation(ip: string) {
 
 export const maxDuration = 30; // seconds — needed for Google Sheets API call
 
+interface OrderItemAddonInput {
+  addonId: string;
+  option?: string;
+  quantity: number;
+}
+
 interface OrderItemInput {
   productId: string;
   productSlug: string;
@@ -80,6 +87,59 @@ interface OrderItemInput {
     text: string;
     price: number;
   };
+  addons?: OrderItemAddonInput[];
+}
+
+/**
+ * Resolve client-selected add-ons against the product's configured add-ons.
+ * Prices, titles and option labels always come from the DB — never from the client.
+ */
+function resolveAddons(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  product: any,
+  input: OrderItemAddonInput[] | undefined
+): { addons: IOrderItemAddon[]; total: number } {
+  if (!product?.addons?.length || !Array.isArray(input) || input.length === 0) {
+    return { addons: [], total: 0 };
+  }
+
+  const resolved: IOrderItemAddon[] = [];
+  let total = 0;
+
+  for (const sel of input) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const def = product.addons.find((a: any) => a.id === sel?.addonId);
+    if (!def) continue;
+
+    const requestedQty = Math.floor(Number(sel?.quantity) || 0);
+    if (requestedQty < 1) continue;
+    const maxPerOption = def.maxPerOption || 10;
+    const quantity = Math.min(requestedQty, maxPerOption);
+
+    let option: string | undefined;
+    let unitPrice = def.price;
+
+    if (def.options?.length) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const opt = def.options.find((o: any) => o.label === sel?.option);
+      if (!opt) continue; // option is required when the add-on defines options
+      option = opt.label;
+      if (typeof opt.price === 'number') unitPrice = opt.price;
+    }
+
+    const subtotal = unitPrice * quantity;
+    total += subtotal;
+    resolved.push({
+      addonId: def.id,
+      title: def.title,
+      option,
+      unitPrice,
+      quantity,
+      subtotal,
+    });
+  }
+
+  return { addons: resolved, total };
 }
 
 export async function POST(request: NextRequest) {
@@ -144,12 +204,27 @@ export async function POST(request: NextRequest) {
     // Fetch IP geolocation concurrently while we process the cart
     const locationPromise = lookupIpLocation(clientIp);
 
+    // Load products up front so add-on prices/titles are resolved server-side
+    const validObjectIds = items
+      .map((item) => item.productId)
+      .filter((id) => /^[0-9a-fA-F]{24}$/.test(id));
+    const productDocs = validObjectIds.length
+      ? await Product.find({ _id: { $in: validObjectIds } }).lean()
+      : [];
+    const productMap = new Map(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      productDocs.map((p: any) => [p._id.toString(), p])
+    );
+
     // Calculate totals
     let subtotal = 0;
     let savings = 0;
 
     const orderItems = items.map((item) => {
-      const itemSubtotal = item.price * item.quantity;
+      const product = productMap.get(item.productId);
+      const { addons, total: addonsTotal } = resolveAddons(product, item.addons);
+
+      const itemSubtotal = item.price * item.quantity + addonsTotal;
       subtotal += itemSubtotal;
 
       // Only calculate savings if the price is actually lower than original price
@@ -167,6 +242,7 @@ export async function POST(request: NextRequest) {
         quantity: item.quantity,
         subtotal: itemSubtotal,
         selectedOffer: item.selectedOffer,
+        ...(addons.length > 0 && { addons }),
       };
     });
 
@@ -218,6 +294,7 @@ export async function POST(request: NextRequest) {
             price: item.price,
             quantity: item.quantity,
             selectedOffer: item.selectedOffer,
+            addons: item.addons,
           })),
           createdAt: new Date().toISOString(),
         },

@@ -34,6 +34,7 @@ import {
 } from '@tabler/icons-react';
 import { categories } from '@/data/categories';
 import IconSelector from './IconSelector';
+import AddonsEditor, { AddonDraft, serializeAddons } from './AddonsEditor';
 import AdminNav from './AdminNav';
 import { useAdminFetch } from '@/hooks/useAdminFetch';
 import { RichTextEditor } from './RichTextEditor/RichTextEditor';
@@ -107,6 +108,7 @@ export default function AddProductForm() {
   const [highlights, setHighlights] = useState<string[]>(['']);
   const [features, setFeatures] = useState<ProductFeature[]>([]);
   const [offers, setOffers] = useState<ProductOffer[]>([]);
+  const [addons, setAddons] = useState<AddonDraft[]>([]);
   const [reviews, setReviews] = useState<ProductReview[]>([]);
   const [images, setImages] = useState<UploadedImage[]>([]);
   const [mainImageIndex, setMainImageIndex] = useState(0);
@@ -452,6 +454,7 @@ export default function AddProductForm() {
           text: o.text,
           price: parseFloat(o.price),
         })),
+      addons: serializeAddons(addons),
       reviews: reviewsWithUploadedImages.filter(
         (r) => r.reviewerName.trim() !== '' && r.reviewText.trim() !== ''
       ),
@@ -493,6 +496,7 @@ export default function AddProductForm() {
         setHighlights(['']);
         setFeatures([]);
         setOffers([]);
+        setAddons([]);
         setReviews([]);
         setImages([]);
         setMainImageIndex(0);
@@ -1117,6 +1121,9 @@ export default function AddProductForm() {
                 </button>
               </div>
             </section>
+
+            {/* Add-ons */}
+            <AddonsEditor value={addons} onChange={setAddons} />
 
             {/* Reviews */}
             <section>

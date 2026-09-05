@@ -6,6 +6,14 @@
 import { google } from 'googleapis';
 import connectToDatabase from './mongodb';
 
+interface OrderItemAddon {
+  title: string;
+  option?: string;
+  unitPrice: number;
+  quantity: number;
+  subtotal: number;
+}
+
 interface OrderItem {
   productSlug: string;
   productName: string;
@@ -16,6 +24,21 @@ interface OrderItem {
     text: string;
     price: number;
   };
+  addons?: OrderItemAddon[];
+}
+
+/**
+ * Human-readable one-cell summary of the add-ons selected for an order item (sheet column L).
+ * e.g. "حبر الطابعة - أسود ×2 (518 MAD); حبر الطابعة - سماوي ×1 (259 MAD)"
+ */
+function formatAddons(addons?: OrderItemAddon[]): string {
+  if (!addons || addons.length === 0) return '';
+  return addons
+    .map((a) => {
+      const name = a.option ? `${a.title} - ${a.option}` : a.title;
+      return `${name} ×${a.quantity} (${a.subtotal} MAD)`;
+    })
+    .join('; ');
 }
 
 interface OrderData {
@@ -110,13 +133,15 @@ export async function appendToGoogleSheet(
         productVariant,               // H: Product variant
         item.productName,             // I: Product name
         productUrl,                   // J: Product URL
+        '',                           // K: (reserved — leave empty)
+        formatAddons(item.addons),    // L: Add-ons
       ];
     });
 
     // Append all rows to sheet
     console.log('[Google Sheets] Appending to spreadsheet...', {
       spreadsheetId: targetSpreadsheetId,
-      range: 'Youcan-Orders!A:J',
+      range: 'Youcan-Orders!A:L',
       rowCount: rows.length,
       orderNumber: orderData.orderNumber
     });
@@ -124,7 +149,7 @@ export async function appendToGoogleSheet(
     // Add timeout wrapper to detect hanging requests
     const appendPromise = sheets.spreadsheets.values.append({
       spreadsheetId: targetSpreadsheetId,
-      range: 'Youcan-Orders!A:J', // Columns A-J (10 columns total)
+      range: 'Youcan-Orders!A:L', // Columns A-L (12 columns total)
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: rows,

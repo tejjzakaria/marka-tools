@@ -7,7 +7,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import {
   IconStar,
   IconStarFilled,
@@ -57,6 +57,8 @@ export default function ProductPageContent({ product }: ProductPageContentProps)
   const [activeRelatedProductSlide, setActiveRelatedProductSlide] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [selectedOffer, setSelectedOffer] = useState<{ icon: string; text: string; price: number } | null>(null);
+  // addonSelections[addonId][optionLabel | "__base"] = quantity
+  const [addonSelections, setAddonSelections] = useState<Record<string, Record<string, number>>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [orderSuccess, setOrderSuccess] = useState(false);
   const [orderNumber, setOrderNumber] = useState("");
@@ -222,10 +224,73 @@ export default function ProductPageContent({ product }: ProductPageContentProps)
 
   // Calculate price based on selected offer or regular price
   const effectivePrice = selectedOffer ? selectedOffer.price : product.price;
-  const totalPrice = effectivePrice * quantity;
   const savings = product.originalPrice
     ? (product.originalPrice - effectivePrice) * quantity
     : 0;
+
+  // Add-ons: resolve current selections into concrete line items
+  const addonUnitPrice = (
+    addon: NonNullable<DBProduct["addons"]>[number],
+    optionLabel: string
+  ) => {
+    const opt = addon.options?.find((o) => o.label === optionLabel);
+    return opt && typeof opt.price === "number" ? opt.price : addon.price;
+  };
+
+  const selectedAddons = useMemo(() => {
+    const out: {
+      addonId: string;
+      title: string;
+      option?: string;
+      unitPrice: number;
+      quantity: number;
+      subtotal: number;
+    }[] = [];
+    for (const addon of product.addons || []) {
+      const selection = addonSelections[addon.id];
+      if (!selection) continue;
+      const hasOptions = !!(addon.options && addon.options.length > 0);
+      for (const [key, qty] of Object.entries(selection)) {
+        if (!qty || qty <= 0) continue;
+        const unitPrice = hasOptions ? addonUnitPrice(addon, key) : addon.price;
+        out.push({
+          addonId: addon.id,
+          title: addon.title,
+          option: hasOptions ? key : undefined,
+          unitPrice,
+          quantity: qty,
+          subtotal: unitPrice * qty,
+        });
+      }
+    }
+    return out;
+  }, [product.addons, addonSelections]);
+
+  const addonsTotal = selectedAddons.reduce((sum, a) => sum + a.subtotal, 0);
+
+  const setAddonQty = (
+    addonId: string,
+    optionKey: string,
+    nextQty: number,
+    multiple: boolean
+  ) => {
+    setAddonSelections((prev) => {
+      const current = { ...(prev[addonId] || {}) };
+      if (nextQty <= 0) {
+        delete current[optionKey];
+      } else {
+        if (!multiple) {
+          for (const k of Object.keys(current)) {
+            if (k !== optionKey) delete current[k];
+          }
+        }
+        current[optionKey] = nextQty;
+      }
+      return { ...prev, [addonId]: current };
+    });
+  };
+
+  const totalPrice = effectivePrice * quantity + addonsTotal;
 
   // Image preview handlers
   const openImagePreview = (images: string[], index: number) => {
@@ -311,6 +376,22 @@ export default function ProductPageContent({ product }: ProductPageContentProps)
 
   const handleOrderSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Enforce required add-ons
+    const missingRequiredAddon = (product.addons || []).find(
+      (addon) =>
+        addon.required &&
+        !selectedAddons.some((s) => s.addonId === addon.id)
+    );
+    if (missingRequiredAddon) {
+      setOrderError(
+        t("productPage.checkout.addonRequiredError", {
+          name: missingRequiredAddon.title,
+        })
+      );
+      return;
+    }
+
     setIsSubmitting(true);
     setOrderError("");
 
@@ -334,6 +415,11 @@ export default function ProductPageContent({ product }: ProductPageContentProps)
               originalPrice: product.originalPrice,
               quantity: quantity,
               selectedOffer: selectedOffer || undefined,
+              addons: selectedAddons.map((a) => ({
+                addonId: a.addonId,
+                option: a.option,
+                quantity: a.quantity,
+              })),
             },
           ],
         }),
@@ -357,6 +443,7 @@ export default function ProductPageContent({ product }: ProductPageContentProps)
         setFormData({ name: "", phone: "", address: "" });
         setQuantity(1);
         setSelectedOffer(null);
+        setAddonSelections({});
         hasTrackedInitiateCheckout.current = false; // Reset for potential next order
       } else {
         setOrderError(data.message || t("productPage.checkout.orderError"));
@@ -948,6 +1035,13 @@ export default function ProductPageContent({ product }: ProductPageContentProps)
                         </div>
                       )}
 
+                      {addonsTotal > 0 && (
+                        <div className="mb-3 flex items-center justify-between">
+                          <span className="text-neutral-600">{t("productPage.checkout.addons")}</span>
+                          <span className="font-medium text-neutral-900">+{formatPriceSimple(addonsTotal)}</span>
+                        </div>
+                      )}
+
                       <div className="border-t border-neutral-200 pt-3">
                         <div className="flex items-center justify-between">
                           <span className="text-lg font-semibold text-neutral-900">
@@ -1048,6 +1142,133 @@ export default function ProductPageContent({ product }: ProductPageContentProps)
                           />
                         </div>
                       </div>
+
+                      {/* Add-ons */}
+                      {product.addons && product.addons.length > 0 && (
+                        <div className="rounded-2xl border-2 border-primary/40 bg-primary/5 p-4">
+                          <div className="mb-3 flex items-center gap-2">
+                            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-white">
+                              <IconPlus size={18} />
+                            </div>
+                            <span className="text-base font-bold text-neutral-900">
+                              {t("productPage.checkout.addonsTitle")}
+                            </span>
+                          </div>
+                          <div className="space-y-3">
+                            {product.addons.map((addon) => {
+                              const AddonIcon = addon.icon ? getIconByName(addon.icon) : null;
+                              const selection = addonSelections[addon.id] || {};
+                              const hasOptions = !!(addon.options && addon.options.length > 0);
+                              const rows = hasOptions
+                                ? addon.options.map((o) => ({
+                                    key: o.label,
+                                    label: o.label,
+                                    price: typeof o.price === "number" ? o.price : addon.price,
+                                  }))
+                                : [{ key: "__base", label: addon.title, price: addon.price }];
+                              const maxPerOption = addon.maxPerOption || 10;
+                              const addonSubtotal = Object.entries(selection).reduce(
+                                (sum, [key, qty]) => {
+                                  const rowPrice =
+                                    rows.find((r) => r.key === key)?.price ?? addon.price;
+                                  return sum + rowPrice * (qty || 0);
+                                },
+                                0
+                              );
+                              return (
+                                <div
+                                  key={addon.id}
+                                  className="rounded-xl border border-primary/20 bg-white p-3"
+                                >
+                                  <div className="mb-2.5 flex items-center gap-2">
+                                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                                      {AddonIcon ? (
+                                        <AddonIcon size={16} className="text-primary" />
+                                      ) : (
+                                        <IconPlus size={16} className="text-primary" />
+                                      )}
+                                    </div>
+                                    <span className="text-sm font-semibold text-neutral-900">
+                                      {addon.title}
+                                    </span>
+                                    {addon.required && <span className="text-primary">*</span>}
+                                  </div>
+                                  <div
+                                    className={
+                                      hasOptions ? "grid grid-cols-2 gap-2" : "space-y-2"
+                                    }
+                                  >
+                                    {rows.map((row) => {
+                                      const qty = selection[row.key] || 0;
+                                      const active = qty > 0;
+                                      return (
+                                        <div
+                                          key={row.key}
+                                          className={`flex flex-col items-center gap-2 rounded-lg border-2 p-2.5 text-center transition-all ${
+                                            active
+                                              ? "border-primary bg-primary/10"
+                                              : "border-neutral-200 bg-white"
+                                          }`}
+                                        >
+                                          <div>
+                                            {hasOptions && (
+                                              <span
+                                                className={`block text-sm font-medium ${
+                                                  active ? "text-neutral-900" : "text-neutral-700"
+                                                }`}
+                                              >
+                                                {row.label}
+                                              </span>
+                                            )}
+                                            <span className="text-xs text-neutral-500">
+                                              {formatPriceSimple(row.price)}
+                                            </span>
+                                          </div>
+                                          <div className="flex items-center gap-2">
+                                            <button
+                                              type="button"
+                                              onClick={() =>
+                                                setAddonQty(addon.id, row.key, qty - 1, addon.multiple)
+                                              }
+                                              disabled={qty <= 0}
+                                              className="flex h-8 w-8 items-center justify-center rounded-lg bg-white text-neutral-700 shadow-sm ring-1 ring-neutral-200 transition-colors hover:bg-neutral-100 disabled:opacity-40"
+                                            >
+                                              <IconMinus size={14} />
+                                            </button>
+                                            <span className="w-6 text-center text-sm font-bold">
+                                              {qty}
+                                            </span>
+                                            <button
+                                              type="button"
+                                              onClick={() =>
+                                                setAddonQty(addon.id, row.key, qty + 1, addon.multiple)
+                                              }
+                                              disabled={qty >= maxPerOption}
+                                              className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white shadow-sm transition-colors hover:bg-primary-dark disabled:opacity-40"
+                                            >
+                                              <IconPlus size={14} />
+                                            </button>
+                                          </div>
+                                        </div>
+                                      );
+                                    })}
+                                  </div>
+                                  {addonSubtotal > 0 && (
+                                    <div className="mt-2.5 flex items-center justify-between border-t border-neutral-100 pt-2 text-sm">
+                                      <span className="text-neutral-600">
+                                        {t("productPage.checkout.addons")}
+                                      </span>
+                                      <span className="font-bold text-primary">
+                                        +{formatPriceSimple(addonSubtotal)}
+                                      </span>
+                                    </div>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
 
                       {/* COD Notice */}
                       <div className="flex items-center gap-3 rounded-xl bg-secondary/10 border-2 border-secondary/30 p-4">
